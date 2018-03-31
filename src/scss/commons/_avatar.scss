@@ -1,0 +1,9 @@
+.#{$prefix}avatar{
+  @extend %profile-photo;
+  @include elem(list){
+    @extend %avatars-list;
+    ul{
+      @extend %list;
+    }
+  }
+};

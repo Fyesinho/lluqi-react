@@ -1,0 +1,52 @@
+.#{$prefix}divisor{
+  height:22px;
+  margin:0;
+  background-color:#f2f4f5;
+  border:0;
+  @include elem(space){
+    margin:30px 0;
+    @include modify(bottom){
+      margin-bottom:30px;
+    };
+    @include modify(top){
+      margin-top:30px;
+    };
+  };
+  @include elem(nav){
+    height: 1px;
+    display: block;
+    width: 100%;
+    border:0;
+    background-color: rgba(#9b9b9b, .4);
+  };
+}
+
+.#{$prefix}separator{
+  display:flex;
+  hr{
+    height:1px;
+    width:50%;
+  }
+  span{
+    text-align:center;
+    margin:10px;
+    line-height:.6
+  }
+  @include modify(light){
+    hr{
+      border-top:1px solid rgba(white, .5);
+    }
+    span{
+      color:white;
+    }
+
+  }
+  @include modify(dark){
+    hr{
+      border-top:1px solid rgba(black, .5);
+    }
+    span{
+      color:black;
+    }
+  }
+}

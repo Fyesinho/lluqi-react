@@ -1,0 +1,19 @@
+$grid:12;
+$grid-gutter: .2rem;
+
+
+.#{$prefix}flex{
+  display: flex;
+}
+.#{$prefix}flex + .#{$prefix}flex{
+  margin-top:.8rem;
+}
+[class*='#{$prefix}flex_']{
+  margin-right: $grid-gutter;
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+@for $i from 1 through $grid {
+  .#{$prefix}flex_#{$i} {flex:$i}
+}

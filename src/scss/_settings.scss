@@ -1,0 +1,65 @@
+//bootstrap and proyects theme variables
+
+$prefix: 'gi-';
+$prefix-llu: 'llu-';
+$giwer-red: #f55065;
+$giwer-black: #242424;
+
+$giwer-grey: #aeaeb3;
+$giwer-font-color: #595959;
+
+
+$lluqi-orange: #ffb400;
+$lluqi-orange-hover: #ffa009;
+$lluqi-black-text: #575756;
+$lluqi-font-color: #575756;
+$lluqi-white: white;
+//others
+
+$facebook: #4568b2;
+
+$font-family-base: 'Roboto';
+$font-family-sec: 'Roboto Slab';
+
+$primary: $lluqi-orange;
+$secondary: $lluqi-white;
+$third: #484848;
+$red: $giwer-red;
+$blue: #548cff;
+$green: #2fdab8;
+$hover-orange: $lluqi-orange-hover;
+
+// Body Elements
+
+$body-color: $giwer-font-color;
+$paragraph-margin-bottom: 0;
+$headings-margin-bottom: 0;
+
+// Anchor Elements
+
+$link-color: $secondary;
+$link-hover-color: darken($link-color, 20%);
+$link-hover-decoration: none;
+
+$enable-gradients: false;
+
+//layout padding
+
+$grid-gutter-width: 38px !default;
+
+//font size
+
+//$font-weight-light: ;
+$font-weight-normal: 200;
+$font-weight-bold: 900;
+
+//inputs
+$input-btn-focus-width: 1px;
+$input-btn-focus-color: $giwer-red;
+$input-btn-focus-box-shadow: none;
+
+//buttons
+
+//$btn-font-weight            : 300;
+@import "config/mixins";
+@import "config/placeholders";

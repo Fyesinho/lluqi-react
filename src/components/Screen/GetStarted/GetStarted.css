@@ -1,0 +1,10 @@
+.get-started ul li {
+  margin: 10px 0; }
+  .get-started ul li p {
+    font-size: 14px; }
+  .get-started ul li code {
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px; }

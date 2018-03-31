@@ -1,0 +1,78 @@
+.llu-testimonies {
+  background-image: url("../../../../assets/images/DESKTOP_testimonio_fondo.png");
+  height: 500px;
+  margin-top: 60px;
+  color: white;
+  text-align: center; }
+  .llu-testimonies p {
+    padding-top: 26px;
+    width: 50%;
+    margin: auto;
+    font-style: italic; }
+  .llu-testimonies h5 {
+    padding-top: 20px; }
+  .llu-testimonies .slick-slide img {
+    height: 142px;
+    width: 142px;
+    border-radius: 71px 71px 71px 71px;
+    display: block;
+    margin: auto; }
+  .llu-testimonies .slick-dots {
+    margin-left: 0 !important;
+    bottom: -20% !important; }
+  .llu-testimonies .slick-dots li button {
+    height: 12px !important;
+    width: 12px !important;
+    background-color: transparent;
+    border: 2px solid white !important;
+    opacity: 1 !important; }
+  .llu-testimonies .slick-arrow {
+    background-color: white; }
+  .llu-testimonies .slick-arrow:hover {
+    background-color: #ffa009; }
+  .llu-testimonies .slick-active button {
+    background-color: white !important;
+    opacity: 1 !important; }
+  .llu-testimonies .slick-prev {
+    top: 72%;
+    z-index: 50;
+    left: 185px !important;
+    position: absolute;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 46px;
+    height: 46px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: #ffb400;
+    border-radius: 5px; }
+  .llu-testimonies .slick-next {
+    top: 72%;
+    z-index: 50;
+    right: 185px !important;
+    position: absolute;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 46px;
+    height: 46px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: #ffb400;
+    border-radius: 5px; }
+
+.llu-slider {
+  padding-top: 70px; }

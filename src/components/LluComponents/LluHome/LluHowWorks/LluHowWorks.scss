@@ -1,0 +1,33 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}how_works {
+  text-align: center;
+  h1{
+    font-family: $font-family-sec;
+  }
+  p{
+    font-size: 13px;
+  }
+  .llu-row{
+    margin-top: 40px;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 19px;
+    margin-left: 19px;
+  }
+  .success{
+    margin-top: 10px;
+    background: #00b195;
+    color: white;
+    width: 40%;
+    height:44px;
+  }
+  .btn-register{
+    background: #e91e62;
+    color: white;
+    height:44px;
+    margin-top: 80px;
+    width:25%;
+  }
+}

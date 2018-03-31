@@ -1,0 +1,38 @@
+.llu-main_banner {
+  margin-top: 80px;
+  height: 600px;
+  background-image: url("../../../../assets/images/background-home.png");
+  text-align: center; }
+  .llu-main_banner .main-title p {
+    font-family: "Roboto Slab";
+    font-size: 64px; }
+    .llu-main_banner .main-title p.title {
+      padding-top: 120px;
+      color: #ffb400;
+      font-weight: bold; }
+    .llu-main_banner .main-title p.subtitle {
+      line-height: 0.7; }
+  .llu-main_banner .description {
+    margin-top: 50px; }
+  .llu-main_banner .button-onboarding {
+    margin-top: 65px; }
+    .llu-main_banner .button-onboarding button {
+      color: #FFFFFF;
+      width: 310px;
+      height: 44px;
+      font-weight: bold;
+      margin-right: 20px; }
+      .llu-main_banner .button-onboarding button.btn-border {
+        color: #000000;
+        background: transparent;
+        border: 2px solid #ffb400; }
+      .llu-main_banner .button-onboarding button.btn-border:hover {
+        color: #FFFFFF;
+        background: #ffb400;
+        border: 2px solid #ffb400; }
+
+.shadow {
+  box-shadow: 2px 2px 0 2px #c5c8d1; }
+
+.color-white {
+  color: #FFFFFF !important; }

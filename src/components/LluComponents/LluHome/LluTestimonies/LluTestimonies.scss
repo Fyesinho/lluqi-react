@@ -1,0 +1,96 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}testimonies {
+  background-image: url("../../../../assets/images/DESKTOP_testimonio_fondo.png");
+  height: 500px;
+  margin-top: 60px;
+  color: white;
+  text-align: center;
+  p {
+    padding-top: 26px;
+    width: 50%;
+    margin: auto;
+    font-style: italic;
+  }
+  h5 {
+    padding-top: 20px;
+  }
+  .slick-slide img {
+    height: 142px;
+    width: 142px;
+    border-radius: 71px 71px 71px 71px;
+    display: block;
+    margin: auto;
+  }
+  .slick-dots {
+    margin-left: 0 !important;
+    bottom: -20% !important;
+  }
+  .slick-dots li button {
+    height: 12px !important;
+    width: 12px !important;
+    background-color: transparent;
+    border: 2px solid white !important;
+    opacity: 1 !important;
+  }
+  .slick-arrow {
+    background-color: white;
+  }
+
+  .slick-arrow:hover {
+    background-color: $lluqi-orange-hover;
+  }
+
+  .slick-active button {
+    background-color: white !important;
+    opacity: 1 !important;
+  }
+
+  .slick-prev {
+    top: 72%;
+    z-index: 50;
+    left: 185px !important;
+    position: absolute;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 46px;
+    height: 46px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: $primary;
+    border-radius: 5px;
+  }
+
+  .slick-next {
+    top: 72%;
+    z-index: 50;
+    right: 185px !important;
+    position: absolute;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 46px;
+    height: 46px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: $primary;
+    border-radius: 5px;
+  }
+}
+
+.#{$prefix-llu}slider {
+  padding-top: 70px;
+}

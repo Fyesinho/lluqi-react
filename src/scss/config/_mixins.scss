@@ -1,0 +1,108 @@
+@import '../../../node_modules/bootstrap/scss/_mixins.scss';
+
+@mixin elem($el){
+  &__#{$el}{
+    @content;
+  }
+}
+@mixin modify($mod){
+  &--#{$mod}{
+    @content;
+  }
+}
+@mixin clamp($line){
+    display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+@mixin figure($width, $height, $gutter) {
+  a{
+    figure{
+      margin-right:$gutter;
+      width: $width;
+      img{
+        height: $height;
+      }
+    }
+  }
+
+}
+ @mixin slick($height,$margin){
+   a{
+     height:$height;
+     margin-right:$margin;
+     margin:0 10px;
+     &:first-child{
+       margin-left: 19px;
+     }
+     figure{
+       img{
+         width: 100%;
+         height: $height;
+         object-fit: cover;
+       }
+     }
+   }
+ }
+ @mixin mobile($max-size){
+   @media only screen and (max-width:$max-size){
+     @content;
+   }
+ }
+
+@mixin circle($size){
+  border-radius:50%;
+  width: $size;
+  height: $size;
+  display:block;
+}
+@mixin column-gap($count, $width, $gap){
+  column-count: $count;
+  column-width: $width;
+  column-gap: $gap;
+  -webkit-column-count: $count;
+  -webkit-column-gap: $gap;
+  -webkit-column-width: $width;
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -moz-column-width: $width;
+}
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+@mixin float($float){
+  float:$float;
+  &:after,
+  &:before{
+    clear:both;
+  }
+}
+@mixin truncate($width:''){
+  @if $width == '' {
+    //nada
+  } @else {
+    max-width:$width;
+  }
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
