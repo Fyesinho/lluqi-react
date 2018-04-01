@@ -96,12 +96,11 @@
     opacity: 1 !important; }
   .llu-destinations .slick-dots li.slick-active button {
     background-color: #ffb400; }
+  .llu-destinations .row-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
 
 .shadow-box {
   box-shadow: 3px 4px 9px 5px #c5c8d1; }
-
-.row-flex {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
