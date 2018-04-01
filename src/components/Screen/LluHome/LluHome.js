@@ -6,6 +6,7 @@ import LluMainBanner from "../../LluComponents/LluHome/LluMainBanner/LluMainBann
 import LluHowWorks from "../../LluComponents/LluHome/LluHowWorks/LluHowWorks";
 import LluTestimonies from "../../LluComponents/LluHome/LluTestimonies/LluTestimonies";
 import LluDestinations from "../../LluComponents/LluHome/LluDestinations/LluDestinations";
+import LluNewsletter from "../../LluComponents/LluHome/LluNewsletter/LluNewsletter";
 
 class LluHome extends Component {
     render() {
@@ -14,7 +15,8 @@ class LluHome extends Component {
             <LluMainBanner key="llu-main_banner"/>,
             <LluHowWorks key="llu-how_works"/>,
             <LluTestimonies key="llu-testimonies"/>,
-            <LluDestinations key="llu-destinations"/>
+            <LluDestinations key="llu-destinations"/>,
+            <LluNewsletter key="llu-newsletter"/>
         ]
     }
 }

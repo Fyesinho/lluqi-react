@@ -1,0 +1,29 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}newsletter {
+  margin-top: 65px;
+  background-color: #00b296;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h1 {
+    margin-top: 10px;
+    font-family: $font-family-sec;
+    margin-bottom: 20px;
+    span{
+      color: $primary;
+    }
+  }
+  div {
+    button {
+      color: white;
+    }
+  }
+  .row-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
