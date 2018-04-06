@@ -1,0 +1,16 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}footer {
+  font-size: 14px;
+  padding-top: 30px;
+  h6{
+    color: $primary;
+    font-weight: bold;
+  }
+  ul{
+    -webkit-padding-start: 0;
+    li{
+      margin-top: 8px;
+    }
+  }
+}

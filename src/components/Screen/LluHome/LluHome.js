@@ -7,6 +7,9 @@ import LluHowWorks from "../../LluComponents/LluHome/LluHowWorks/LluHowWorks";
 import LluTestimonies from "../../LluComponents/LluHome/LluTestimonies/LluTestimonies";
 import LluDestinations from "../../LluComponents/LluHome/LluDestinations/LluDestinations";
 import LluNewsletter from "../../LluComponents/LluHome/LluNewsletter/LluNewsletter";
+import LluThanks from "../../LluComponents/LluHome/LluThanks/LluThanks";
+import LluFooter from "../../LluComponents/LluHome/LluFooter/LluFooter";
+import LluTermsAndConditions from "../../LluComponents/LluHome/LluTermsAndConditions/LluTermsAndConditions";
 
 class LluHome extends Component {
     render() {
@@ -16,7 +19,10 @@ class LluHome extends Component {
             <LluHowWorks key="llu-how_works"/>,
             <LluTestimonies key="llu-testimonies"/>,
             <LluDestinations key="llu-destinations"/>,
-            <LluNewsletter key="llu-newsletter"/>
+            <LluNewsletter key="llu-newsletter"/>,
+            <LluThanks key="llu-thanks"/>,
+            <LluFooter key="llu-footer"/>,
+            <LluTermsAndConditions key="llu-terms-and-conditions"/>
         ]
     }
 }

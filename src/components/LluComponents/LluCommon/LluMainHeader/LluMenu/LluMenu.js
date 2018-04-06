@@ -14,7 +14,7 @@ class LluMenu extends Component {
                     </li>
                     <li>
                         <LluAnchor>
-                            ¡Tengo Hostal!
+                            ¡Tengo recinto!
                         </LluAnchor>
                     </li>
                     <li>

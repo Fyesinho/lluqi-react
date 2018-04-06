@@ -1,0 +1,13 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}terms {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.#{$prefix-llu}social_footer {
+  .fa {
+    margin-left: 20px;
+  }
+}
