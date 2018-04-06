@@ -1,0 +1,24 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}thanks {
+  display: block;
+  height: 100px;
+  background-color: #efefef;
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  img {
+    width: 120px;
+    height: 35px;
+  }
+  .font-weight-bold{
+    margin-top: 10px;
+  }
+}
+
+.vertical-center {
+  align-items: center;
+}

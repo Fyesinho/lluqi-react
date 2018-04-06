@@ -42,7 +42,7 @@ class LluDestiny extends Component{
                             className="fa fa-share-alt"/><br/>compartir
                         </div>
                         <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fa fa-picture-o"/><br/>ver fotografías
+                            className="fa fa-picture-o"/><br/>ver anfitriones
                         </div>
                         <div className="col-3" style={{padding: 0}}><LluIcon
                             className="fa fa-map-o"/><br/>ver en mapa
