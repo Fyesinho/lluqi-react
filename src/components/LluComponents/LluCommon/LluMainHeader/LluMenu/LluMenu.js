@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 //Components
 import LluAnchor from "../../LluAnchor/LluAnchor";
+import LluModalRegisterParent from "../../../../LluModals/LluModalRegister/LluModalRegisterParent";
 
 class LluMenu extends Component {
     render() {
@@ -8,9 +9,7 @@ class LluMenu extends Component {
             <nav>
                 <ul>
                     <li>
-                        <LluAnchor>
-                            ¡Quiero Viajar!
-                        </LluAnchor>
+                        <LluModalRegisterParent/>
                     </li>
                     <li>
                         <LluAnchor>
