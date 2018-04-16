@@ -9,7 +9,8 @@ class LluModalImageForm extends Component {
         return (
             <div className="llu-image_form">
                 <div className="col-12 text-right">
-                    <LluAnchor action={this.props.closeModal}><LluIcon className="fa fa-times-circle"/></LluAnchor>
+                    <LluAnchor action={this.props.closeModal} className="close-element"><LluIcon
+                        className="fas fa-times-circle"/></LluAnchor>
                 </div>
             </div>
         )

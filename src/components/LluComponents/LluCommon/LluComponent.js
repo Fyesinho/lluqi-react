@@ -26,6 +26,13 @@ class LluComponent extends Component {
             })
         }, 500);
     }
+
+    closeAll(){
+        const close = document.getElementsByClassName('close-element');
+        Object.values(close).forEach((value) =>{
+            value.click();
+        })
+    }
 }
 
 

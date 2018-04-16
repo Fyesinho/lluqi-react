@@ -3,7 +3,7 @@ import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 //Assets
 import './LluFormStep1.css'
 import LluIcon from "../LluIcon/LluIcon";
-import LluButton from "../LluButton/LluButton";
+import LluModalRegisterParentStep2 from "../../../LluModals/LluModalRegisterStep2/LluModalRegisterParentStep2";
 
 class LluFormStep1 extends Component {
     render() {
@@ -19,7 +19,7 @@ class LluFormStep1 extends Component {
                 <label htmlFor="basic-url">Tu correo electrónico</label>
                 <div className="input-group container">
                     <div className="input-group-prepend">
-                        <LluIcon className="fa fa-envelope-o"/>
+                        <LluIcon className="fas fa-envelope"/>
                     </div>
                     <input placeholder="correo@gmail.com" type="text" className="llu-input_form"/>
                     <div className="input-group-append">
@@ -31,7 +31,7 @@ class LluFormStep1 extends Component {
                 <label htmlFor="basic-url">Tu nombre y apellido</label>
                 <div className="input-group container">
                     <div className="input-group-prepend">
-                        <LluIcon className="fa fa-user-o"/>
+                        <LluIcon className="fas fa-user"/>
                     </div>
                     <input placeholder="Nombre Apellido" type="text" className="llu-input_form"/>
                     <div className="input-group-append">
@@ -121,9 +121,7 @@ class LluFormStep1 extends Component {
                 </div>
             </div>,
             <div key="button_next" className="col-12 text-center">
-                <LluButton className="btn btn-primary shadow">
-                    Siguiente >>
-                </LluButton>
+                <LluModalRegisterParentStep2/>
             </div>,
             <hr key="separatpr"/>,
             <div id="login_form" key="login" className="col-12 text-center">
