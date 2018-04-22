@@ -82,6 +82,9 @@
   margin-top: -8px;
   font-weight: 900; }
 
+.color-primary {
+  color: #ffb400; }
+
 .llu-modal.showModal {
   opacity: 1;
   visibility: visible; }

@@ -58,6 +58,9 @@
   margin-top: -8px;
   font-weight: 900; }
 
+.color-primary {
+  color: #ffb400; }
+
 .llu-testimonies {
   background-image: url("../../../../assets/images/DESKTOP_testimonio_fondo.png");
   height: 500px;

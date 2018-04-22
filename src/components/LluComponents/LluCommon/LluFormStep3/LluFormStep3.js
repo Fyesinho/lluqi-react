@@ -5,6 +5,7 @@ import './LluFormStep3.css'
 import LluIcon from "../LluIcon/LluIcon";
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
+import LluIconSelect from "../LluIconSelect/LluIconSelect";
 
 class LluFormStep3 extends LluComponent {
     render() {
@@ -21,92 +22,38 @@ class LluFormStep3 extends LluComponent {
                 <label htmlFor="basic-url">Tareas Básicas</label>
                 <div className="input-group container">
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-h-square"/><br/>
-                            <span className="text-center">Recepción</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-trash-alt"/><br/>
-                            <span className="text-center">Limpieza</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-wrench"/><br/>
-                            <span className="text-center">Mantención</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-h-square">Recepción</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-trash-alt">Limpieza</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-wrench">Mantención</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-user-plus"/><br/>
-                            <span className="text-center">Social Media</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-utensils"/><br/>
-                            <span className="text-center">Junior en la cocina</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-glass-martini"/><br/>
-                            <span className="text-center">Mesero/Copero</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-user-plus">Social Media</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-utensils">Junior en la cocina</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-glass-martini">Mesero/Copero</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-chart-line"/><br/>
-                            <span className="text-center">Administración</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer far fa-smile"/><br/>
-                            <span className="text-center">Promotor de fiestas</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-leaf"/><br/>
-                            <span className="text-center">Jardinería</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-chart-line">Administración</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-smile">Promotor de fiestas</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-leaf">Jardinería</LluIconSelect>
                     </ul>
                 </div>
                 <hr style={{marginBottom: 0, marginTop: 0, width: '70%'}}/>
                 <label htmlFor="basic-url">Tareas Específicas</label>
                 <div className="input-group container">
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-laptop"/><br/>
-                            <span className="text-center">Desarrollo Web/Blog</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-briefcase"/><br/>
-                            <span className="text-center">Asesoría Contable</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-language"/><br/>
-                            <span className="text-center">Lecciones de idioma</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-laptop">Desarrollo Web/Blog</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-briefcase">Asesoría Contable</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-language">Lecciones de idioma</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-music"/><br/>
-                            <span className="text-center">Artistas (cantantes, bailarines)</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-paint-brush"/><br/>
-                            <span className="text-center">Artes (pintores profesionales / dibujantes)</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-camera"/><br/>
-                            <span className="text-center">Fotografía</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-music">Artistas (cantantes, bailarines)</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-paint-brush">Artes (pintores profesionales / dibujantes)</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-camera">Fotografía</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-map"/><br/>
-                            <span className="text-center">Guía Turistico</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-video"/><br/>
-                            <span className="text-center">Producción de videos</span>
-                        </div>
-                        <div className="col-4 text-center float-lg-left">
-                            <LluIcon style={{fontSize: "35px"}} className="pointer fas fa-moon"/><br/>
-                            <span className="text-center">Turnos nocturnos</span>
-                        </div>
+                        <LluIconSelect className="pointer fas fa-map">Guía Turistico</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-video">Producción de videos</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-moon">Turnos nocturnos</LluIconSelect>
                     </ul>
                 </div>
             </div>,
