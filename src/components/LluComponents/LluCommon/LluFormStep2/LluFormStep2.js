@@ -3,7 +3,7 @@ import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 //Assets
 import './LluFormStep2.css'
 import LluIcon from "../LluIcon/LluIcon";
-import LluModalRegisterParentStep3 from "../../../LluModals/LluModalRegisterStep3/LluModalRegisterParentStep3";
+import LluModalRegisterParentStep3 from "../../../LluModals/LluModalsRegisterTraveler/LluModalRegisterStep3/LluModalRegisterParentStep3";
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
 

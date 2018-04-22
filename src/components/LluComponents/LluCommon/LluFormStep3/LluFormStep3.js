@@ -2,7 +2,6 @@ import React from 'react';
 import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 //Assets
 import './LluFormStep3.css'
-import LluIcon from "../LluIcon/LluIcon";
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
 import LluIconSelect from "../LluIconSelect/LluIconSelect";
@@ -47,7 +46,8 @@ class LluFormStep3 extends LluComponent {
                     </ul>
                     <ul style={{width: '100%'}}>
                         <LluIconSelect className="pointer fas fa-music">Artistas (cantantes, bailarines)</LluIconSelect>
-                        <LluIconSelect className="pointer fas fa-paint-brush">Artes (pintores profesionales / dibujantes)</LluIconSelect>
+                        <LluIconSelect className="pointer fas fa-paint-brush">Artes (pintores profesionales /
+                            dibujantes)</LluIconSelect>
                         <LluIconSelect className="pointer fas fa-camera">Fotografía</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>

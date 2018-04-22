@@ -1,7 +1,7 @@
 import React from 'react';
-import LluComponent from "../../LluComponents/LluCommon/LluComponent";
+import LluComponent from "../../../LluComponents/LluCommon/LluComponent";
 import LluModalRegisterStep2 from "./LluModalRegisterStep2";
-import LluButton from "../../LluComponents/LluCommon/LluButton/LluButton";
+import LluButton from "../../../LluComponents/LluCommon/LluButton/LluButton";
 
 class LluModalRegisterParentStep2 extends LluComponent {
     render() {

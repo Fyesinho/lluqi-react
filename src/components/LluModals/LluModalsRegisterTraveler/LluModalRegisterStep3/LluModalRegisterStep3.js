@@ -1,8 +1,8 @@
 import React from 'react';
-import LluComponent from "../../LluComponents/LluCommon/LluComponent";
-import LluModal from "../../LluComponents/LluCommon/LluModal/LluModal";
+import LluComponent from "../../../LluComponents/LluCommon/LluComponent";
+import LluModal from "../../../LluComponents/LluCommon/LluModal/LluModal";
 import LluModalImageForm from "../LluModalImageForm/LluModalImageForm";
-import LluFormStep3 from "../../LluComponents/LluCommon/LluFormStep3/LluFormStep3";
+import LluFormStep3 from "../../../LluComponents/LluCommon/LluFormStep3/LluFormStep3";
 
 class LluModalRegisterStep3 extends LluComponent {
     render() {

@@ -1,8 +1,8 @@
 import React from 'react';
-import LluComponent from "../../LluComponents/LluCommon/LluComponent";
-import LluModal from "../../LluComponents/LluCommon/LluModal/LluModal";
-import LluModalImageForm from "../LluModalImageForm/LluModalImageForm";
-import LluFormStep2 from "../../LluComponents/LluCommon/LluFormStep2/LluFormStep2";
+import LluComponent from "../../../LluComponents/LluCommon/LluComponent";
+import LluModal from "../../../LluComponents/LluCommon/LluModal/LluModal";
+import LluModalImageForm from "../LluModalImageFormHostel/LluModalImageFormHostel";
+import LluFormHostalStep2 from "../../../LluComponents/LluCommon/LluFormHostalStep2/LluFormHostalStep2";
 
 class LluModalRegisterStep2 extends LluComponent {
     render() {
@@ -13,7 +13,7 @@ class LluModalRegisterStep2 extends LluComponent {
                 <div className="row" style={{marginLeft: 0, marginRight: 0}}>
                     <div className="col-6">
                         <div className="llu-gradient">
-                            <LluFormStep2 closeModal={this.props.closeModal}/>
+                            <LluFormHostalStep2 closeModal={this.props.closeModal}/>
                         </div>
                     </div>
                     <div className="col-6">

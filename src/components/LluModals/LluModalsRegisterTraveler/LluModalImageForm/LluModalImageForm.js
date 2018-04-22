@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import LluAnchor from "../../LluComponents/LluCommon/LluAnchor/LluAnchor";
+import LluAnchor from "../../../LluComponents/LluCommon/LluAnchor/LluAnchor";
 //Assets
 import './LluModalImageForm.css';
-import LluIcon from "../../LluComponents/LluCommon/LluIcon/LluIcon";
+import LluIcon from "../../../LluComponents/LluCommon/LluIcon/LluIcon";
 
 class LluModalImageForm extends Component {
     render() {

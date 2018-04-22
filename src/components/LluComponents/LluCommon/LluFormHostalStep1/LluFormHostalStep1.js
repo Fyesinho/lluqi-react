@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 //Assets
-import './LluFormStep1.css'
+import './LluFormHostalStep1.css'
 import LluIcon from "../LluIcon/LluIcon";
-import LluModalRegisterParentStep2 from "../../../LluModals/LluModalsRegisterTraveler/LluModalRegisterStep2/LluModalRegisterParentStep2";
+import LluModalRegisterParentStep2 from "../../../LluModals/LluModalsRegisterHostal/LluModalRegisterStep2/LluModalRegisterParentStep2";
 
 class LluFormStep1 extends Component {
     render() {
         return [
             <div key="header" className="llu-header_form">
                 <LluLogo/>
-                <h2>Crear cuenta para Viajero</h2>
+                <h2>Crear cuenta para Hostal</h2>
                 <p>Aún puedes registrarte con Facebook o Google o crear una cuenta para hostal</p>
             </div>,
             <div key="body" className="llu-body_form">
