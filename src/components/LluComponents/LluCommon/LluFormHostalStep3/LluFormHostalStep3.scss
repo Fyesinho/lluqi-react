@@ -1,0 +1,46 @@
+@import "../../../../scss/settings";
+
+.select {
+  margin-right: 3px;
+}
+
+.llu-body_form {
+  p {
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 12px;
+  }
+  .checkbox-inline{
+    color: $primary;
+    text-align: center;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.row{
+  button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+#login_form{
+  p{
+    font-size: 12px !important;
+    span{
+      color: $primary;
+    }
+  }
+  margin-bottom: 20px;
+}
+
+.m-right{
+  margin-right: 35px;
+}
