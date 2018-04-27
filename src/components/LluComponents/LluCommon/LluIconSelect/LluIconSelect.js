@@ -18,6 +18,7 @@ class LluIconSelect extends Component {
 
     render() {
         let clase = '';
+        let font = '35px';
         if (this.state.isClicked) {
             clase = ' color-primary'
         }
@@ -25,9 +26,13 @@ class LluIconSelect extends Component {
         if(this.props.from === 'hostel'){
             col = 'col-3';
         }
+        if(this.props.from === 'hostel2'){
+            col = 'col-2';
+            font = '25px'
+        }
         return (
             <div onClick={this.handleClick} className={col + " text-center float-lg-left" + clase}>
-                <LluIcon style={{fontSize: '35px'}}
+                <LluIcon style={{fontSize: font}}
                          className={this.props.className + clase}/><br/>
                 <span className="text-center">{this.props.children}</span>
             </div>

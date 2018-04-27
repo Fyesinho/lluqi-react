@@ -5,6 +5,7 @@ import './LluFormHostalStep3.css'
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
 import LluIconSelect from "../LluIconSelect/LluIconSelect";
+import LluModalRegisterParentStep4 from "../../../LluModals/LluModalsRegisterHostal/LluModalRegisterStep4/LluModalRegisterParentStep4";
 
 class LluFormStep3 extends LluComponent {
     render() {
@@ -63,9 +64,7 @@ class LluFormStep3 extends LluComponent {
                     background: "transparent",
                     border: "2px solid #ffb400", marginRight: "5px"
                 }}>{"<<Volver"}</LluButton>
-                <LluButton key="llu-modal_register_button" action={this.closeAll} className="btn btn-primary shadow">
-                    Finalizar
-                </LluButton>
+                <LluModalRegisterParentStep4/>
             </div>,
             <hr key="separatpr"/>,
             <div id="login_form" key="login" className="col-12 text-center">
