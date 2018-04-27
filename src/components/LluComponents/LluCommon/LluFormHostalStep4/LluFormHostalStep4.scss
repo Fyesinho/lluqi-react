@@ -1,0 +1,40 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}contador-horas {
+  margin-left: -60px !important;
+  .half_numero {
+    text-align: justify;
+    font-size: 11px;
+    text-align: right;
+    margin-left: -5px;
+    .numero {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      color: $primary;
+      margin-right: 5px;
+      .numero_label {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: $primary;
+        margin-right: 5px;
+      }
+    }
+    .arrows {
+      width: 10px;
+      position: absolute;
+      margin-top: 10px;
+      svg {
+        color: #878787;
+        font-size: 25px;
+      }
+    }
+  }
+  .s_half_numero {
+    text-align: justify;
+    font-size: 11px;
+    margin: auto;
+    margin-left: 15px;
+  }
+}

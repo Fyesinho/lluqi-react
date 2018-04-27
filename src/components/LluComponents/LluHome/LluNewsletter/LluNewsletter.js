@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 //Assets
 import './LluNewsletter.css';
 import GiButton from "../../Common/GiButton";
-import LluIcon from "../../LluCommon/LluIcon/LluIcon";
 
 class LluNewsletter extends Component {
     render() {

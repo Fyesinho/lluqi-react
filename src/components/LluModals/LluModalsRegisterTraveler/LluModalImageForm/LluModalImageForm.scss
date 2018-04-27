@@ -1,0 +1,18 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}image_form {
+  background-image: url('https://beta.lluqi.com/wp-content/uploads/2017/10/registro-hostal.jpg');
+  background-color: $primary;
+  height: 100vh;
+  background-repeat: round;
+  position: fixed;
+  width: 40%;
+  div{
+    margin-top: 7px;
+  }
+  a{
+    font-size: 20px;
+    color: #FFFFFF !important;
+    text-align: right;
+  }
+}

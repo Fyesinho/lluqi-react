@@ -1,0 +1,88 @@
+@import '../../../../scss/settings';
+
+.#{$prefix-llu}modal{
+  @extend %modal;
+  &.showModal{
+    opacity: 1;
+    visibility: visible;
+  }
+  @include modify(right){
+    left:-100%;
+    opacity: 0;
+    &.showModal{
+      left:0;
+      opacity: 1;
+      visibility: visible;
+    }
+  };
+  @include modify(left){
+    left:100%;
+    &.showModal{
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  };
+  @include modify(top){
+    top:100%;
+    &.showModal{
+      top:0;
+      opacity: 1;
+      visibility: visible;
+    }
+  };
+  @include elem(header){
+    .icon-close{
+      float: left;
+      font-size:2rem;
+    }
+    overflow: hidden;
+    position: absolute;
+    z-index: 9007;
+    top: 0;
+    height: 60px;
+    padding:20px;
+    line-height: 2;
+    opacity: 1;
+    visibility: visible;
+  };
+  @include elem(content){
+    height:100%;
+    overflow-y:auto;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    @include modify(bottom){
+    };
+  }
+  @include modify(overlay) {
+    @include transition(all 0.5s ease);
+    z-index: 9010;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.34);
+    &.showOverlay {
+      opacity: 1;
+    }
+  };
+}
+
+.#{$prefix-llu}modal::-webkit-scrollbar {
+  /* This is the magic bit */
+  display: none;
+}
+
+.#{$prefix-llu}container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+  height: 100%;
+}

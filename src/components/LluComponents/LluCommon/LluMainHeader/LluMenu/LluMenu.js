@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 //Components
 import LluAnchor from "../../LluAnchor/LluAnchor";
+import LluModalRegisterParentTraveler from "../../../../LluModals/LluModalsRegisterTraveler/LluModalRegister/LluModalRegisterParent";
+import LluModalRegisterParentHostel from "../../../../LluModals/LluModalsRegisterHostal/LluModalRegister/LluModalRegisterParent";
 
 class LluMenu extends Component {
     render() {
@@ -8,14 +10,10 @@ class LluMenu extends Component {
             <nav>
                 <ul>
                     <li>
-                        <LluAnchor>
-                            ¡Quiero Viajar!
-                        </LluAnchor>
+                        <LluModalRegisterParentTraveler/>
                     </li>
                     <li>
-                        <LluAnchor>
-                            ¡Tengo recinto!
-                        </LluAnchor>
+                        <LluModalRegisterParentHostel/>
                     </li>
                     <li>
                         <LluAnchor className="enfasis">

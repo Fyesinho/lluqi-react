@@ -36,16 +36,16 @@ class LluDestiny extends Component{
                     <hr/>
                     <div className="row-flex">
                         <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fa fa-heart-o"/><br/>wishlist
+                            className="far fa-heart"/><br/>wishlist
                         </div>
                         <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fa fa-share-alt"/><br/>compartir
+                            className="fas fa-share-alt"/><br/>compartir
                         </div>
                         <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fa fa-picture-o"/><br/>ver anfitriones
+                            className="fas fa-image"/><br/>ver anfitriones
                         </div>
                         <div className="col-3" style={{padding: 0}}><LluIcon
-                            className="fa fa-map-o"/><br/>ver en mapa
+                            className="far fa-map"/><br/>ver en mapa
                         </div>
                     </div>
                 </div>
