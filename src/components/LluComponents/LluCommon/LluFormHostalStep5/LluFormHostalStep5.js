@@ -4,68 +4,10 @@ import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 import './LluFormHostalStep5.css'
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
-import LluIcon from "../LluIcon/LluIcon";
 import LluIconSelect from "../LluIconSelect/LluIconSelect";
 
 class LluFormStep5 extends LluComponent {
-    constructor() {
-        super();
-        this.state = {
-            hoursByDay: 3,
-            daysByWeek: 3,
-            minimumWeeks: 1,
-            maximumWeeks: 5
-        };
-        this.plusHour = this.plusHour.bind(this);
-        this.plusDay = this.plusDay.bind(this);
-        this.plusMinWeek = this.plusMinWeek.bind(this);
-        this.plusMaxWeek = this.plusMaxWeek.bind(this);
-        this.minusHour = this.minusHour.bind(this);
-        this.minusDay = this.minusDay.bind(this);
-        this.minusMinWeek = this.minusMinWeek.bind(this);
-        this.minusMaxWeek = this.minusMaxWeek.bind(this);
-    }
-
-
-    plusHour(e) {
-        e.preventDefault();
-        this.setState({hoursByDay: parseInt(this.state.hoursByDay, 10) + 1});
-    }
-
-    plusDay() {
-        this.setState({daysByWeek: parseInt(this.state.daysByWeek, 10) + 1});
-    }
-
-    plusMinWeek() {
-        this.setState({minimumWeeks: parseInt(this.state.minimumWeeks, 10) + 1});
-    }
-
-    plusMaxWeek() {
-        this.setState({maximumWeeks: parseInt(this.state.maximumWeeks, 10) + 1});
-    }
-
-    minusHour() {
-        this.setState({hoursByDay: parseInt(this.state.hoursByDay, 10) - 1});
-    }
-
-    minusDay() {
-        this.setState({daysByWeek: parseInt(this.state.daysByWeek, 10) - 1});
-    }
-
-    minusMinWeek() {
-        this.setState({minimumWeeks: parseInt(this.state.minimumWeeks, 10) - 1});
-    }
-
-    minusMaxWeek() {
-        this.setState({maximumWeeks: parseInt(this.state.maximumWeeks, 10) - 1});
-    }
-
     render() {
-        const hoursByDay = this.state.hoursByDay < 10 ? '0' + this.state.hoursByDay : this.state.hoursByDay;
-        const daysByWeek = this.state.daysByWeek < 10 ? '0' + this.state.daysByWeek : this.state.daysByWeek;
-        const minimumWeeks = this.state.minimumWeeks < 10 ? '0' + this.state.minimumWeeks : this.state.minimumWeeks;
-        const maximumWeeks = this.state.maximumWeeks < 10 ? '0' + this.state.maximumWeeks : this.state.maximumWeeks;
-        const calcHours = this.state.hoursByDay * this.state.daysByWeek;
         return [
             <div key="header" className="llu-header_form">
                 <LluLogo/>
@@ -110,7 +52,8 @@ class LluFormStep5 extends LluComponent {
                         <LluIconSelect from="hostel" className="pointer fas fa-utensils">Cena</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <LluIconSelect from="hostel" className="pointer fas fa-shopping-basket">Lavandería</LluIconSelect>
+                        <LluIconSelect from="hostel"
+                                       className="pointer fas fa-shopping-basket">Lavandería</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fas fa-wifi">Internet</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fa-tv">TV Cable</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fa-blind">Tour incluido</LluIconSelect>
