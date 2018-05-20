@@ -1,0 +1,9 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}profile_banner {
+  background: white;
+  img{
+    max-height: 500px;
+    width: 100%;
+  }
+}

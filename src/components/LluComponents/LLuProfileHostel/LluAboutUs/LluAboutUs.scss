@@ -1,0 +1,13 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}about_us {
+  background: white;
+  padding: 50px;
+  h2{
+    font-family:$font-family-sec;
+  }
+  h6{
+    color: $lluqi-black-text;
+    margin-bottom: 20px;
+  }
+}

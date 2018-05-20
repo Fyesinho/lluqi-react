@@ -7,7 +7,7 @@ import LluAnchor from "../../LluCommon/LluAnchor/LluAnchor";
 class LluTermsAndConditions extends Component {
     render() {
         return (
-            <div className="container llu-terms">
+            <div className="llu-terms">
                 <div className="row">
                     <div className="col-md-5">
                         &#9400;2016-2018. Lluqi.com Todos los derechos reservados

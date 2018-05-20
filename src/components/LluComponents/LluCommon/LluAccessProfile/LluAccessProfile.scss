@@ -1,0 +1,15 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}access_profile {
+  margin-top: -24px;
+  img{
+    width:40px;
+    border-radius: 20px;
+    height:40px;
+    float: left;
+  }
+  figcaption{
+    margin-left: 5px;
+    float: right;
+  }
+}

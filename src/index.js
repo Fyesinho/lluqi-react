@@ -5,19 +5,19 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //Screens
 import LluHome from "./components/Screen/LluHome/LluHome";
 //Functions
-import {pageView} from "./components/LluComponents/Common/GiAnalytics/GiAnalytics";
 //Assets
 import './index.css';
+import LluProfileSelect from "./components/Screen/LluProfileSelect/LluProfileSelect";
+import LluBinnacle from "./components/Screen/LluBinnacle/LluBinnacle";
 
 
 const GiwerRouter = () =>
-    <Router onUpdate={pageView()}>
-        <div>
+    <Router>
+        <div style={{background: '#e9e7e7'}}>
             <Switch>
                 <Route exact path='/' component={LluHome}/>
-                {/*<Route path='/product/:brand_product/:name_product' component={GiProductView}/>*/}
-                {/*<Route path='/test' component={GetStarted}/>*/}
-                {/*<Route component={GetStarted}/>*/}
+                <Route path='/profile/:name_profile' component={LluProfileSelect}/>
+                <Route path='/bitacora' component={LluBinnacle}/>
             </Switch>
         </div>
     </Router>;

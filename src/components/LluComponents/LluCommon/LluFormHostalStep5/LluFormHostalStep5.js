@@ -4,7 +4,6 @@ import LluLogo from "../LluMainHeader/LluLogo/LluLogo";
 import './LluFormHostalStep5.css'
 import LluButton from "../LluButton/LluButton";
 import LluComponent from "../LluComponent";
-import LluIcon from "../LluIcon/LluIcon";
 import LluIconSelect from "../LluIconSelect/LluIconSelect";
 
 class LluFormStep5 extends LluComponent {
@@ -61,11 +60,6 @@ class LluFormStep5 extends LluComponent {
     }
 
     render() {
-        const hoursByDay = this.state.hoursByDay < 10 ? '0' + this.state.hoursByDay : this.state.hoursByDay;
-        const daysByWeek = this.state.daysByWeek < 10 ? '0' + this.state.daysByWeek : this.state.daysByWeek;
-        const minimumWeeks = this.state.minimumWeeks < 10 ? '0' + this.state.minimumWeeks : this.state.minimumWeeks;
-        const maximumWeeks = this.state.maximumWeeks < 10 ? '0' + this.state.maximumWeeks : this.state.maximumWeeks;
-        const calcHours = this.state.hoursByDay * this.state.daysByWeek;
         return [
             <div key="header" className="llu-header_form">
                 <LluLogo/>
@@ -110,7 +104,8 @@ class LluFormStep5 extends LluComponent {
                         <LluIconSelect from="hostel" className="pointer fas fa-utensils">Cena</LluIconSelect>
                     </ul>
                     <ul style={{width: '100%'}}>
-                        <LluIconSelect from="hostel" className="pointer fas fa-shopping-basket">Lavandería</LluIconSelect>
+                        <LluIconSelect from="hostel"
+                                       className="pointer fas fa-shopping-basket">Lavandería</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fas fa-wifi">Internet</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fa-tv">TV Cable</LluIconSelect>
                         <LluIconSelect from="hostel" className="pointer fas fa-blind">Tour incluido</LluIconSelect>

@@ -1,0 +1,13 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}offer {
+  padding: 50px;
+  background: white;
+  h2{
+    padding-bottom: 30px;
+  }
+  .d-flex{
+    justify-content: center;
+    align-items: center;
+  }
+}
