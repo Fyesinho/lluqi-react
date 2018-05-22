@@ -15,6 +15,7 @@ class LluMenu extends Component {
         const style = {
             color: '#575756'
         };
+
         return (
             <nav>
                 {user ?
@@ -26,9 +27,9 @@ class LluMenu extends Component {
                             <LluAnchor><LluIcon className="fas fa-envelope"/> Mensajes</LluAnchor>
                         </li>
                         <li>
-                            <LluAnchor>
+                            <Link style={style} to={`/profile/${user}`}>
                                 <LLuAccessProfile/>
-                            </LluAnchor>
+                            </Link>
                         </li>
                     </ul> :
                     <ul>

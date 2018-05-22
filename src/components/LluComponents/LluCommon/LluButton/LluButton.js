@@ -5,6 +5,7 @@ class LluButton extends Component {
         return (
             <button
                 id={this.props.id}
+                disabled={this.props.disabled}
                 style={this.props.style}
                 className={this.props.className}
                 onClick={this.props.action}>

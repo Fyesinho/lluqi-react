@@ -6,6 +6,7 @@ import LluModalsSelectRegister from "../../../LluModals/LluModalsSelectRegister/
 
 class LluMainBanner extends Component {
     render() {
+        const user = sessionStorage.getItem('user');
         return (
             <div className="llu-main_banner">
                 <div className="main-title">
@@ -17,20 +18,13 @@ class LluMainBanner extends Component {
                     <p>No necesitas tener experiencia previa, lo importante es compartir lo mejor que sabes hacer.</p>
                 </div>
                 <div className="button-onboarding">
-                    <LluModalsSelectRegister/>
+                    {!user ?
+                        <LluModalsSelectRegister/> : null }
                     <LluButton className="btn btn-border">¡Quiero ver mas destinos!</LluButton>
                 </div>
             </div>
         )
     }
 }
-
-// background: #ffb400;
-// width: 310px;
-// height: 44px;
-// font-weight: bold;
-// color: white;
-// margin-right: 20px;
-// box-shadow: 2px 2px 0px 2px #c5c8d1
 
 export default LluMainBanner;
