@@ -4,15 +4,12 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //Screens
 import LluHome from "./components/Screen/LluHome/LluHome";
-//Functions
 //Assets
 import './index.css';
 import LluProfileSelect from "./components/Screen/LluProfileSelect/LluProfileSelect";
 import LluBinnacle from "./components/Screen/LluBinnacle/LluBinnacle";
 import LluDestinations from "./components/Screen/LluDestinations/LluDestinations";
-
-
-const GiwerRouter = () =>
+const LluqiRouter = () =>
     <Router>
         <div style={{background: '#e9e7e7'}}>
             <Switch>
@@ -25,4 +22,4 @@ const GiwerRouter = () =>
     </Router>;
 
 
-ReactDOM.render(<GiwerRouter/>, document.getElementById('root'));
+ReactDOM.render(<LluqiRouter/>, document.getElementById('root'));

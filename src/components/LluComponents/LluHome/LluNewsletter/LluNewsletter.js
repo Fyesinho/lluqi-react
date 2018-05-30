@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 //Assets
 import './LluNewsletter.css';
-import GiButton from "../../Common/GiButton";
+import LluButton from "../../LluCommon/LluButton/LluButton";
 
 class LluNewsletter extends Component {
     render() {
@@ -15,7 +15,7 @@ class LluNewsletter extends Component {
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div style={{display: "unset"}} className="form-inline">
                     <input placeholder="tu correo electrónico" className="form-control form-group" type="text"/>
-                    <GiButton className="btn btn-primary">Suscribirme</GiButton>
+                    <LluButton className="btn btn-primary">Suscribirme</LluButton>
                 </div>
             </div>
         )
