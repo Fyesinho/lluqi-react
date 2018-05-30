@@ -6,13 +6,17 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import LluHome from "./components/Screen/LluHome/LluHome";
 //Assets
 import './index.css';
-
-
+import LluProfileSelect from "./components/Screen/LluProfileSelect/LluProfileSelect";
+import LluBinnacle from "./components/Screen/LluBinnacle/LluBinnacle";
+import LluDestinations from "./components/Screen/LluDestinations/LluDestinations";
 const LluqiRouter = () =>
     <Router>
-        <div>
+        <div style={{background: '#e9e7e7'}}>
             <Switch>
                 <Route exact path='/' component={LluHome}/>
+                <Route path='/profile/:name_profile' component={LluProfileSelect}/>
+                <Route path='/bitacora' component={LluBinnacle}/>
+                <Route path='/destinos' component={LluDestinations}/>
             </Switch>
         </div>
     </Router>;

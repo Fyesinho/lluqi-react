@@ -1,7 +1,8 @@
 @import "../../../../scss/settings";
 
 .#{$prefix-llu}destinations {
-  margin-top: 50px;
+  background: white;
+  padding: 50px 100px 50px 100px;
   text-align: center;
   .fa-globe {
     color: $primary

@@ -1,0 +1,48 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}hostel_information {
+  background: white;
+  padding: 10px 10px 20px 20px;
+  .title {
+    padding: 10px 0 20px 20px;
+    h1 {
+      font-family: $font-family-sec;
+    }
+  }
+  .cont_information{
+    display: flex;
+    .information {
+      width: 50%;
+      float: left;
+      margin: 0 0 0 20px;
+      img {
+        width: 180px;
+        height: 180px;
+        border-radius: 90px;
+      }
+      img + figcaption {
+        margin-right: 30%;
+        float: right;
+      }
+    }
+    .estadia {
+      text-align: center;
+      width: 48%;
+      float: left;
+      &_table{
+        margin-top: 10px;
+        float: left;
+        width: 50%;
+      }
+      button{
+        margin-top: 25px;
+        color: white;
+        font-weight: 500;
+      }
+      .fa-star{
+        color: $primary;
+      }
+    }
+  }
+
+}

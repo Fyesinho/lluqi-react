@@ -1,7 +1,9 @@
 @import "../../../../scss/settings";
 
 .#{$prefix-llu}how_works {
+  background: white;
   text-align: center;
+  padding: 50px;
   h1{
     font-family: $font-family-sec;
   }

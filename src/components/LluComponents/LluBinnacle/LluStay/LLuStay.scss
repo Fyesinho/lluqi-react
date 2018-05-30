@@ -1,0 +1,42 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}stay {
+  padding: 20px 40px;
+  background: white;
+  width: 70%;
+  margin-bottom: 30px;
+  h2 {
+    font-weight: 900;
+  }
+  h6 {
+    padding-bottom: 10px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .number {
+    font-size: 40px;
+    color: #00b296;
+  }
+  .pt-3 {
+    svg {
+      color: gold;
+    }
+  }
+  .success {
+    color: #00b296;
+    font-weight: 900;
+  }
+  .failed {
+    color: red;
+    font-weight: 900;
+  }
+  .pendent {
+    color: purple;
+    font-weight: 900;
+  }
+}
+
+.shadow_stay {
+  box-shadow: 1px 1px 5px 4px #c5c8d1
+}

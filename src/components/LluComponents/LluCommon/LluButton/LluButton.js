@@ -5,6 +5,8 @@ class LluButton extends Component {
         return (
             <button
                 id={this.props.id}
+                href={this.props.href}
+                disabled={this.props.disabled}
                 style={this.props.style}
                 className={this.props.className}
                 onClick={this.props.action}>

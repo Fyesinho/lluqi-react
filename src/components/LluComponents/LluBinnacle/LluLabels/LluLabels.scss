@@ -1,0 +1,34 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}labels {
+  margin-top: 80px;
+  background: white;
+}
+
+.#{$prefix-llu}label_all {
+  font-size: 12px;
+  width: 160px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: $primary;
+  color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.#{$prefix-llu}label_primary {
+  background: $primary;
+}
+
+.#{$prefix-llu}label_success {
+  background: green;
+}
+
+.#{$prefix-llu}label_failed {
+  background: $giwer-red;
+}
+
+.#{$prefix-llu}label_pendent {
+  background: purple;
+}

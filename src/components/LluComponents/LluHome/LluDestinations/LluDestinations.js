@@ -8,6 +8,7 @@ import {nextArrow, prevArrow} from "../../LluCommon/LluConstants/LluConstants";
 import './LluDestinations.css';
 import LluDestiny from "../../LluCommon/LluDestiny/LluDestiny";
 
+
 class LluDestinations extends Component {
     render() {
         const settings = {
@@ -20,7 +21,7 @@ class LluDestinations extends Component {
             prevArrow: prevArrow(this.props)
         };
         return [
-            <section key="llu-destinations" className="container llu-destinations">
+            <section key="llu-destinations" className="llu-destinations">
                 <div>
                     <div className="title float-lg-left">
                         <LluIcon className="fa fa-globe"/>

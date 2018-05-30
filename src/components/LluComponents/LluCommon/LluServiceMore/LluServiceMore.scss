@@ -1,0 +1,15 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}service_more {
+  text-align: center;
+  display: block;
+  width: 20%;
+  margin-right: 40px;
+  svg{
+    font-size: 50px;
+    color: $lluqi-black-text;
+  }
+  h6{
+    font-weight: 900;
+  }
+}

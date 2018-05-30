@@ -1,0 +1,12 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}calendar {
+  background: white;
+  padding: 50px 50px 40px 50px;
+  h2{
+    padding-bottom: 20px;
+  }
+  .d-flex:last-child{
+    padding-top: 30px;
+  }
+}

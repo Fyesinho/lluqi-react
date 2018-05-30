@@ -1,0 +1,82 @@
+@import "../../../scss/settings";
+
+.select {
+  margin-right: 3px;
+}
+
+.llu-body_form_login {
+  p {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .checkbox-inline{
+    color: $primary;
+    text-align: center;
+  }
+}
+
+.register_by_login{
+  font-size: 14px !important;
+  padding-bottom: 20px;
+  span{
+    cursor: pointer;
+    color: $primary;
+  }
+}
+
+.button_login{
+  width: 320px;
+  color: white !important;
+}
+
+.forgot_password{
+  padding-top: 10px;
+  margin-right: 100px;
+  color: $primary;
+  cursor: pointer;
+}
+
+.label_login{
+  font-size: 16px !important;
+  font-family: $font-family-ter;
+}
+
+.llu-input_form {
+  font-family: $font-family-ter;
+  padding-left: 10px;
+  border: 2px solid #ffb400;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 80%;
+  height: 25px;
+}
+
+.llu-span_form_right_login {
+  text-align: right;
+  padding-right: 105px;
+  display: block;
+  width: 100%;
+  margin-top: -8px;
+  font-weight: 500;
+}
+
+.row{
+  button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+#login_form{
+  p{
+    span{
+      color: $primary;
+    }
+  }
+  margin-bottom: 20px;
+}

@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 //Assets
 import './LluMainBanner.css';
 import LluButton from "../../LluCommon/LluButton/LluButton";
+import LluModalsSelectRegister from "../../../LluModals/LluModalsSelectRegister/LluModalsSelectRegister";
 
 class LluMainBanner extends Component {
+    constructor() {
+        super();
+        this.onClickButton = this.onClickButton.bind(this);
+    }
+
+    onClickButton() {
+        window.location.replace('/destinos');
+    }
+
     render() {
+        const user = sessionStorage.getItem('user');
         return (
             <div className="llu-main_banner">
                 <div className="main-title">
@@ -16,20 +28,13 @@ class LluMainBanner extends Component {
                     <p>No necesitas tener experiencia previa, lo importante es compartir lo mejor que sabes hacer.</p>
                 </div>
                 <div className="button-onboarding">
-                    <LluButton className="btn btn-primary shadow">¡Crear cuenta en Lluqi.com!</LluButton>
-                    <LluButton className="btn btn-border">¡Quiero ver mas destinos!</LluButton>
+                    {!user ?
+                        <LluModalsSelectRegister/> : null }
+                    <LluButton action={this.onClickButton} className="btn btn-border">¡Quiero ver mas destinos!</LluButton>
                 </div>
             </div>
         )
     }
 }
-
-// background: #ffb400;
-// width: 310px;
-// height: 44px;
-// font-weight: bold;
-// color: white;
-// margin-right: 20px;
-// box-shadow: 2px 2px 0px 2px #c5c8d1
 
 export default LluMainBanner;

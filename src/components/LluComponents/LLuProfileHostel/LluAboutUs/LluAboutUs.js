@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
-import Section from '../../Layout/Section/Section';
+import LluIcon from "../../LluCommon/LluIcon/LluIcon";
 
-import './Docs.css';
+import './LluAboutUs.css';
+import LluAnchor from "../../LluCommon/LluAnchor/LluAnchor";
 
-class Docs extends Component {
+class LluAboutUs extends Component {
     render() {
         return (
-            <Section title="Documentación">
+            <div className="container llu-about_us">
+                <h2>Quienes Somos</h2>
+                <LluAnchor href="http://www.columbahostel.com">
+                    <h6>
+                        <LluIcon style={{color: '#ffb400'}} className="fas fa-globe"/>
+                     http://www.columbahostel.com
+                    </h6>
+                </LluAnchor>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -14,9 +22,9 @@ class Docs extends Component {
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </Section>
-        );
+            </div>
+        )
     }
 }
 
-export default Docs;
+export default LluAboutUs;

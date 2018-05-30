@@ -62,7 +62,8 @@
   color: #ffb400; }
 
 .llu-destinations {
-  margin-top: 50px;
+  background: white;
+  padding: 50px 100px 50px 100px;
   text-align: center; }
   .llu-destinations .fa-globe {
     color: #ffb400; }

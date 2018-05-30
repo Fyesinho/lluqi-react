@@ -62,7 +62,9 @@
   color: #ffb400; }
 
 .llu-how_works {
-  text-align: center; }
+  background: white;
+  text-align: center;
+  padding: 50px; }
   .llu-how_works h1 {
     font-family: "Roboto Slab"; }
   .llu-how_works p {
