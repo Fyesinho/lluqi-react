@@ -9,6 +9,7 @@ import LluHome from "./components/Screen/LluHome/LluHome";
 import './index.css';
 import LluProfileSelect from "./components/Screen/LluProfileSelect/LluProfileSelect";
 import LluBinnacle from "./components/Screen/LluBinnacle/LluBinnacle";
+import LluDestinations from "./components/Screen/LluDestinations/LluDestinations";
 
 
 const GiwerRouter = () =>
@@ -18,6 +19,7 @@ const GiwerRouter = () =>
                 <Route exact path='/' component={LluHome}/>
                 <Route path='/profile/:name_profile' component={LluProfileSelect}/>
                 <Route path='/bitacora' component={LluBinnacle}/>
+                <Route path='/destinos' component={LluDestinations}/>
             </Switch>
         </div>
     </Router>;

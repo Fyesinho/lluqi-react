@@ -6,6 +6,8 @@ import LluAnchor from "../../LluComponents/LluCommon/LluAnchor/LluAnchor";
 import LluLogo from "../../LluComponents/LluCommon/LluMainHeader/LluLogo/LluLogo";
 //Assets
 import './LluModalSelectRegister.css';
+import hostal from '../../../assets/images/perfil_hostal.PNG';
+import viajero from '../../../assets/images/perfil_viajero.PNG';
 
 class LluModalsSelectRegister extends LluComponent {
     constructor() {
@@ -44,11 +46,14 @@ class LluModalsSelectRegister extends LluComponent {
                 <div className="text-center pt-4">
                     <LluLogo/>
                 </div>
+                <hr style={{width: '60%'}}/>
                 <h3 className="text-center pt-4">Registro de Usuario</h3>
                 <p className="text-center">¿Cuál perfil quieres crear?</p>
-                <div className="row pt-4">
-                    <LluAnchor className="col-5 text-center" action={this.openRegisterTraveler}>viajero</LluAnchor>
-                    <LluAnchor className="col-5 text-center" action={this.openRegisterHostel}>hotel</LluAnchor>
+                <div className="row pt-4 m-auto">
+                    <LluAnchor className="col-6 text-center" action={this.openRegisterTraveler}>
+                        <img src={viajero} alt="" /><p>Viajero</p></LluAnchor>
+                    <LluAnchor className="col-6 text-center" action={this.openRegisterHostel}>
+                        <img src={hostal} alt="" /><p>Hostal</p></LluAnchor>
                 </div>
             </LluModal>
         ]

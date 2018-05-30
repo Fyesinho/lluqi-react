@@ -1,10 +1,20 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 //Assets
 import './LluMainBanner.css';
 import LluButton from "../../LluCommon/LluButton/LluButton";
 import LluModalsSelectRegister from "../../../LluModals/LluModalsSelectRegister/LluModalsSelectRegister";
 
 class LluMainBanner extends Component {
+    constructor() {
+        super();
+        this.onClickButton = this.onClickButton.bind(this);
+    }
+
+    onClickButton() {
+        window.location.replace('/destinos');
+    }
+
     render() {
         const user = sessionStorage.getItem('user');
         return (
@@ -20,7 +30,7 @@ class LluMainBanner extends Component {
                 <div className="button-onboarding">
                     {!user ?
                         <LluModalsSelectRegister/> : null }
-                    <LluButton className="btn btn-border">¡Quiero ver mas destinos!</LluButton>
+                    <LluButton action={this.onClickButton} className="btn btn-border">¡Quiero ver mas destinos!</LluButton>
                 </div>
             </div>
         )
