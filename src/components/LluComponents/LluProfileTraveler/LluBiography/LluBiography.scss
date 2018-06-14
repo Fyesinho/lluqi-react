@@ -1,9 +1,37 @@
 @import "../../../../scss/settings";
 
-.#{$prefix-llu}biography {
-  background: white;
+.title-color{
+  color: $primary;
 }
 
+.#{$prefix-llu}biography {
+  background: white;
+  .video{
+    color: green;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid gray;
+  }
+  h3{
+    font-family: $font-family-sec;
+  }
+  p{
+    font-size: 14px;
+    svg {
+      color: green;
+    }
+  }
+}
+
+
 .#{$prefix-llu}data {
+  h3{
+    font-family: $font-family-sec;
+  }
   background: white;
 }

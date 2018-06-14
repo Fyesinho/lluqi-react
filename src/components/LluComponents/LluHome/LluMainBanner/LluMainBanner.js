@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 //Assets
 import './LluMainBanner.css';
 import LluButton from "../../LluCommon/LluButton/LluButton";

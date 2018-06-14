@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 //Components
-import LluAnchor from "../../LluAnchor/LluAnchor";
 import LluModalRegisterParentTraveler from "../../../../LluModals/LluModalsRegisterTraveler/LluModalRegister/LluModalRegisterParent";
 import LluModalRegisterParentHostel from "../../../../LluModals/LluModalsRegisterHostal/LluModalRegister/LluModalRegisterParent";
 import LluModalsLogin from "../../../../LluModals/LluModalsLogin/LluModalsLogin";
@@ -24,7 +23,7 @@ class LluMenu extends Component {
                             <Link style={style} to='/bitacora'>Bitácora</Link>
                         </li>
                         <li>
-                            <LluAnchor><LluIcon className="fas fa-envelope"/> Mensajes</LluAnchor>
+                            <Link style={style} to='/mensajes'><LluIcon className="fas fa-envelope"/> Mensajes</Link>
                         </li>
                         <li>
                             <Link style={style} to={`/profile/${user}`}>

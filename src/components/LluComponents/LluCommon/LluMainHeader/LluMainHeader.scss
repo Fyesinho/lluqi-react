@@ -1,5 +1,7 @@
 @import "../../../../scss/settings";
-
+html, body {
+  height: 0;
+}
 .#{$prefix-llu}main_header {
   position: fixed;
   width: 100%;

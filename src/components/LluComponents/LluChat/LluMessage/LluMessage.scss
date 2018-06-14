@@ -1,0 +1,48 @@
+@import "../../../../scss/settings";
+
+html, body {
+  height: 0;
+}
+
+.#{$prefix-llu}message {
+  color: white;
+  background-color: $primary;
+  .title-menu-user {
+    font-weight: 900;
+  }
+  .resume {
+    font-size: 14px;
+  }
+  img {
+    border-radius: 50%;
+    border: 3px solid #b4b4b4;
+    height: 50px;
+    width: 50px;
+  }
+  svg {
+    margin-top: 10px;
+    margin-left: 26px;
+    font-size: 26px;
+  }
+}
+
+.#{$prefix-llu}message-date {
+  padding-top: 1rem;
+  padding-left: 4rem;
+}
+
+.hr_message {
+  margin-top: 0.5rem;
+  padding: 0;
+  width: 95%;
+}
+
+.#{$prefix-llu}message-content {
+  height: 77vh;
+}
+
+.#{$prefix-llu}write {
+  position: fixed;
+  bottom: 20px;
+  width: 40%;
+}

@@ -5,7 +5,7 @@ import LluProfileTraveler from "../LLuProfileTraveler/LluProfileTraveler";
 class LluProfileSelect extends Component {
     render() {
         const userType = sessionStorage.getItem('type');
-        if (userType === 'viajero') {
+        if (userType === 'traveler') {
             return (
                 <LluProfileTraveler/>
             )

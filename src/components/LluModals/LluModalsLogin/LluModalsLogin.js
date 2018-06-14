@@ -71,7 +71,7 @@ class LluModalsLogin extends LluComponent {
 
     submitLogin() {
         sessionStorage.setItem('user', this.state.email);
-        sessionStorage.setItem('type', 'hostel');
+        sessionStorage.setItem('type', 'traveler');
         window.location.reload();
     }
 

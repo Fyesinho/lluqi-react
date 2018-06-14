@@ -1,0 +1,25 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}menu-user {
+  .title-menu-user {
+    font-weight: 900;
+  }
+  .resume, .notify {
+    font-size: 14px;
+  }
+  .notify {
+    background-color: $primary;
+    height: 20px;
+    color: white;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  img {
+    border-radius: 50%;
+    border: 3px solid gray;
+    height: 50px;
+    width: 50px;
+  }
+}
+
