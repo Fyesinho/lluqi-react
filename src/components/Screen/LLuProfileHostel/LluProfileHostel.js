@@ -10,6 +10,7 @@ import LluPictures from "../../LluComponents/LLuProfileHostel/LluPictures/LluPic
 import LluOffer from "../../LluComponents/LLuProfileHostel/LluOffer/LluOffer";
 import LluWork from "../../LluComponents/LLuProfileHostel/LluWork/LluWork";
 import LluCalendar from "../../LluComponents/LLuProfileHostel/LluCalendar/LluCalendar";
+import LluFeedback from "../../LluComponents/LLuProfileHostel/LluFeedback/LluFeedback";
 
 class LluProfileHostel extends Component {
     render() {
@@ -27,6 +28,9 @@ class LluProfileHostel extends Component {
             <LluWork key="llu-work"/>,
             <LluSeparation key="llu-separation_5"/>,
             <LluCalendar key="llu-calendar"/>,
+            <LluSeparation key="llu-separation_6"/>,
+            <LluFeedback key="llu-feedback"/>,
+            <LluSeparation key="llu-separation_7"/>,
             <LluFooter key="llu-footer"/>,
             <LluTermsAndConditions key="llu-terms-and-conditions"/>
         ]

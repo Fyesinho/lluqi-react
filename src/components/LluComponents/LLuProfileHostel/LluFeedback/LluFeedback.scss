@@ -1,0 +1,22 @@
+@import "../../../../scss/settings";
+
+.#{$prefix-llu}feedback_ {
+  background: white;
+  padding: 50px 50px 40px 50px;
+  img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+  .title_feedback {
+    font-weight: bold;
+  }
+  .border_feed {
+    padding: 20px;
+    border: 1px solid gray;
+    margin-left: 179px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+  }
+}

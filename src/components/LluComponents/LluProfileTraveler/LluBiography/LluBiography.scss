@@ -28,10 +28,13 @@
   }
 }
 
-
 .#{$prefix-llu}data {
   h3{
     font-family: $font-family-sec;
+  }
+  .icon_profile{
+    color: #b4b4b4;
+    font-size: 50px;
   }
   background: white;
 }

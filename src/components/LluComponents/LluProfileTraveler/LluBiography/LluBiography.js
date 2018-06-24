@@ -20,7 +20,8 @@ class LluBiography extends Component {
                         <LluSocialFooter/>
                         <hr style={{width: '80%'}}/>
                         <h6 className="pb-2">Sobre Mi</h6>
-                        <p style={{width: '80%', margin: 'auto'}} className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <p style={{width: '80%', margin: 'auto'}} className="pb-3">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                             consequat. </p>
@@ -36,9 +37,41 @@ class LluBiography extends Component {
                         <p className="font-weight-bold pt-2 pb-2">Comentarios denunciados (4)</p>
                     </div>
                     <div className="col-8 llu-data" style={{maxWidth: '65.66667%'}}>
-                        <h3 className="pl-5 pt-5 pb-3 title-color">Idiomas</h3>
-                        <p className="pl-5"><span className="font-weight-bold">Idioma nativo: </span>Alemán</p>
-                        <p className="pl-5"><span className="font-weight-bold">Otros idiomas: </span>Español (básico)</p>
+                        <div>
+                            <h3 className="pl-5 pt-4 pb-3 title-color">Idiomas</h3>
+                            <p className="pl-5"><span className="font-weight-bold">Idioma nativo: </span>Alemán</p>
+                            <p className="pl-5"><span className="font-weight-bold">Otros idiomas: </span>Español
+                                (básico)</p>
+                        </div>
+                        <div>
+                            <h3 className="pl-5 pt-4 pb-3 title-color">Ayuda</h3>
+                            <p className="pl-5"><span className="font-weight-bold">Tareas básicas</span></p>
+                            <div className="flex pl-5 pt-4 pb-4">
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                            </div>
+                            <p className="pl-5"><span className="font-weight-bold">Tareas específicas</span></p>
+                            <div className="flex pl-5 pt-4">
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                                <LluIcon className="icon_profile fas fa-user-plus mr-5"/>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="pl-5 pt-4 pb-3 title-color">Experiencias</h3>
+                            <p className="pl-5">Muchos hostales quieren saber más sobre ti. Hablar de tus habilidades, trabajos o estudios, pueden ser de interés para el hostal al que postulas</p>
+                            <p className="pl-5 pt-2"><span className="font-weight-bold">Actualmente me dedico a: </span></p>
+                            <p className="pl-5 pt-2">Viajar a tiempo completo</p>
+                            <p className="pl-5 pt-2"><span className="font-weight-bold">Tengo experiencia en: </span></p>
+                            <p className="pl-5 pt-2">Viaje, administración e idiomas</p>
+                            <p className="pl-5 pt-2"><span className="font-weight-bold">Poseo habilidades en: </span></p>
+                            <p className="pl-5 pt-2">Relaciones humanas</p>
+                            <p className="pl-5 pt-2"><span className="font-weight-bold">Tengo estudios en: </span></p>
+                            <p className="pl-5 pt-2">Idiomas</p>
+                        </div>
                     </div>
                 </div>
             </div>
