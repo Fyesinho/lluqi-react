@@ -51,4 +51,21 @@ html, body {
     text-align: right;
     margin-right: 50px;
   }
+  @media (max-width: 600px) {
+    .llu-social, .llu-anchor_menu{
+      display: none;
+    }
+    .container-header {
+      text-align: center;
+      padding-right: 80px;
+      padding-left: 80px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .llu-logo {
+      display: block;
+      float: none;
+      padding: 21px 0 0 0;
+    }
+  }
 }

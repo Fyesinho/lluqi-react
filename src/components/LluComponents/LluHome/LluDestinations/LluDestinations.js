@@ -3,19 +3,38 @@ import Slider from 'react-slick';
 import LluIcon from "../../LluCommon/LluIcon/LluIcon";
 import LluButton from "../../LluCommon/LluButton/LluButton";
 import {nextArrow, prevArrow} from "../../LluCommon/LluConstants/LluConstants";
+import LluDestiny from "../../LluCommon/LluDestiny/LluDestiny";
 
 //Assets
 import './LluDestinations.css';
-import LluDestiny from "../../LluCommon/LluDestiny/LluDestiny";
-
 
 class LluDestinations extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { width: 0, height: 0 };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
+        let slides = this.state.width < 601 ? 1 : 3;
         const settings = {
             dots: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 3,
+            slidesToShow: slides,
             slidesToScroll: 1,
             nextArrow: nextArrow(this.props),
             prevArrow: prevArrow(this.props)

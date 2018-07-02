@@ -125,7 +125,26 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-
+  @media (max-width: 600px) {
+    button {
+      margin-top: 10px;
+    }
+    padding: 20px 10px;
+    .slick-list {
+      padding-left: 15px;
+    }
+    @include elem(body) {
+      margin-top: 80px;
+    }
+    .slick-next {
+      top: 98%;
+      right: 0 !important;
+    }
+    .slick-prev {
+      top: 98%;
+      right: unset !important;
+    }
+  }
 }
 
 .shadow-box {

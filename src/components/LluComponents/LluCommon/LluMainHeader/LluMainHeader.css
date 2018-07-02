@@ -103,3 +103,16 @@ html, body {
   .llu-main_header .llu-social {
     text-align: right;
     margin-right: 50px; }
+  @media (max-width: 600px) {
+    .llu-main_header .llu-social, .llu-main_header .llu-anchor_menu {
+      display: none; }
+    .llu-main_header .container-header {
+      text-align: center;
+      padding-right: 80px;
+      padding-left: 80px;
+      margin-right: auto;
+      margin-left: auto; }
+    .llu-main_header .llu-logo {
+      display: block;
+      float: none;
+      padding: 21px 0 0 0; } }

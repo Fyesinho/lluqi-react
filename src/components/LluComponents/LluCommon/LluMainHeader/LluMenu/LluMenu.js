@@ -16,7 +16,7 @@ class LluMenu extends Component {
         };
 
         return (
-            <nav>
+            <nav className="llu-anchor_menu">
                 {user ?
                     <ul>
                         <li>

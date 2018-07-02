@@ -165,6 +165,21 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+  @media (max-width: 600px) {
+    .llu-destinations {
+      padding: 20px 10px; }
+      .llu-destinations button {
+        margin-top: 10px; }
+      .llu-destinations .slick-list {
+        padding-left: 15px; }
+      .llu-destinations__body {
+        margin-top: 80px; }
+      .llu-destinations .slick-next {
+        top: 98%;
+        right: 0 !important; }
+      .llu-destinations .slick-prev {
+        top: 98%;
+        right: unset !important; } }
 
 .shadow-box {
   box-shadow: 3px 4px 9px 5px #c5c8d1; }

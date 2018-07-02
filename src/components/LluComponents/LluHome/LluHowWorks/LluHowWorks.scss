@@ -4,6 +4,7 @@
   background: white;
   text-align: center;
   padding: 50px;
+
   h1{
     font-family: $font-family-sec;
   }
@@ -31,5 +32,21 @@
     height:44px;
     margin-top: 80px;
     width:25%;
+  }
+  @media (max-width: 600px) {
+    h1{
+      font-size: 36px;
+    }
+    img{
+      width: 100%;
+    }
+    .success{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .btn-register{
+      margin-top: 20px;
+      width:100%;
+    }
   }
 }

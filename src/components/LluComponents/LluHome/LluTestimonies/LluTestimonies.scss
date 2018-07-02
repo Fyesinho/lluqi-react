@@ -23,7 +23,7 @@
   }
   .slick-dots {
     margin-left: 0 !important;
-    bottom: -20% !important;
+    bottom: -20%;
   }
   .slick-dots li button {
     height: 12px !important;
@@ -87,6 +87,24 @@
     outline: 0;
     background: $primary;
     border-radius: 5px;
+  }
+  @media (max-width: 600px) {
+    height: unset;
+    padding-bottom: 15px;
+    p {
+      width: 85%;
+    }
+    .slick-next {
+      top: 27%;
+      right: 20px !important;
+    }
+    .slick-prev {
+      top: 27%;
+      left: 20px !important;
+    }
+    .slick-dots {
+      display: none !important;
+    }
   }
 }
 

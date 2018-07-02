@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 //Components
 import LluLogo from "./LluLogo/LluLogo";
 import LluMenu from "./LluMenu/LluMenu";
@@ -12,9 +11,7 @@ class LluMainHeader extends Component {
         return (
             <header className="llu-main_header">
                 <div className="container-header">
-                    <Link to="/">
-                        <LluLogo/>
-                    </Link>
+                    <LluLogo/>
                     <div style={{paddingTop: "18px"}}>
                         <LluMenu/>
                         <LluSocial/>

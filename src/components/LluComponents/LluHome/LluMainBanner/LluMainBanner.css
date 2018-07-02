@@ -70,12 +70,16 @@
     font-family: "Roboto Slab";
     font-size: 64px; }
     .llu-main_banner .main-title p.title {
+      line-height: 1;
       padding-top: 120px;
       color: #ffb400;
       font-weight: bold; }
     .llu-main_banner .main-title p.subtitle {
-      line-height: 0.7; }
+      -ms-word-wrap: break-word;
+      word-wrap: break-word;
+      line-height: 1; }
   .llu-main_banner .description {
+    padding: 0 20px;
     margin-top: 50px; }
   .llu-main_banner .button-onboarding {
     margin-top: 65px; }
@@ -93,6 +97,16 @@
         color: #FFFFFF;
         background: #ffb400;
         border: 2px solid #ffb400; }
+  @media (max-width: 600px) {
+    .llu-main_banner {
+      height: unset; }
+      .llu-main_banner .main-title p {
+        font-size: 36px; }
+      .llu-main_banner .button-onboarding {
+        margin-top: 15px; }
+        .llu-main_banner .button-onboarding button {
+          margin-right: 0;
+          margin-bottom: 10px; } }
 
 .shadow {
   box-shadow: 2px 2px 0 2px #c5c8d1; }

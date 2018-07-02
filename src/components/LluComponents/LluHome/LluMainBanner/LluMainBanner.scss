@@ -10,16 +10,20 @@
       font-family: $font-family-sec;
       font-size: 64px;
       &.title {
+        line-height: 1;
         padding-top: 120px;
         color: #ffb400;
         font-weight: bold
       }
       &.subtitle {
-        line-height: 0.7
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1
       }
     }
   }
   .description{
+    padding: 0 20px;
     margin-top: 50px;
   }
   .button-onboarding{
@@ -39,6 +43,21 @@
         color: #FFFFFF;
         background: $primary;
         border: 2px solid $primary;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .main-title {
+      p {
+        font-size: 36px;
+      }
+    }
+    height: unset;
+    .button-onboarding {
+      margin-top: 15px;
+      button {
+        margin-right: 0;
+        margin-bottom: 10px;
       }
     }
   }

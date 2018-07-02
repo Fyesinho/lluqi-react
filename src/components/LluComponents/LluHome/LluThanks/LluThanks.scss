@@ -17,6 +17,14 @@
   .font-weight-bold{
     margin-top: 10px;
   }
+  @media (max-width: 600px) {
+    padding: 0;
+    height: auto;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
 }
 
 .vertical-center {

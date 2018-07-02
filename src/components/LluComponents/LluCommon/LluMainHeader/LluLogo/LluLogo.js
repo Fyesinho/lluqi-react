@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import LluAnchor from "../../LluAnchor/LluAnchor";
+import {Link} from 'react-router-dom';
+
 //Assets
 import logo from '../../../../../assets/images/logo.png';
 
 class LluLogo extends Component {
     render() {
         return (
-            <LluAnchor className="llu-logo">
+            <Link to="/" className="llu-logo">
                 <img src={logo} alt="logo"/>
-            </LluAnchor>
+            </Link>
         )
     }
 }

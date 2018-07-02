@@ -81,7 +81,7 @@
     margin: auto; }
   .llu-testimonies .slick-dots {
     margin-left: 0 !important;
-    bottom: -20% !important; }
+    bottom: -20%; }
   .llu-testimonies .slick-dots li button {
     height: 12px !important;
     width: 12px !important;
@@ -135,6 +135,20 @@
     outline: 0;
     background: #ffb400;
     border-radius: 5px; }
+  @media (max-width: 600px) {
+    .llu-testimonies {
+      height: unset;
+      padding-bottom: 15px; }
+      .llu-testimonies p {
+        width: 85%; }
+      .llu-testimonies .slick-next {
+        top: 27%;
+        right: 20px !important; }
+      .llu-testimonies .slick-prev {
+        top: 27%;
+        left: 20px !important; }
+      .llu-testimonies .slick-dots {
+        display: none !important; } }
 
 .llu-slider {
   padding-top: 70px; }
