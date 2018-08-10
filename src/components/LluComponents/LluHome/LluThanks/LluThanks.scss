@@ -20,9 +20,17 @@
   @media (max-width: 600px) {
     padding: 0;
     height: auto;
-    img {
+    #lluqi_img {
+      width: 50%;
+      height: 50%;
+    }
+    #santiago_img {
       width: 70%;
       height: 70%;
+    }
+    #corfo_img {
+      width: 50%;
+      height: 50%;
     }
   }
 }

@@ -3,6 +3,7 @@ import LluComponent from "../../LluComponents/LluCommon/LluComponent";
 import LluButton from "../../LluComponents/LluCommon/LluButton/LluButton";
 import LluModal from "../../LluComponents/LluCommon/LluModal/LluModal";
 import LluAnchor from "../../LluComponents/LluCommon/LluAnchor/LluAnchor";
+import LluIcon from "../../LluComponents/LluCommon/LluIcon/LluIcon";
 import LluLogo from "../../LluComponents/LluCommon/LluMainHeader/LluLogo/LluLogo";
 //Assets
 import './LluModalSelectRegister.css';
@@ -43,8 +44,8 @@ class LluModalsSelectRegister extends LluComponent {
                 className="llu-container llu-half_modal"
                 isOpenClass={this.state.isOpenClass}
                 isOpen={this.state.modalIsOpen}>
-                <div className="text-center pt-4">
-                    <LluLogo/>
+                <div className="text-center pt-4 container">
+                    <LluLogo/><span onClick={this.closeModal}><LluIcon className="fas fa-times float-right"/></span>
                 </div>
                 <hr style={{width: '60%'}}/>
                 <h3 className="text-center pt-4">Registro de Usuario</h3>

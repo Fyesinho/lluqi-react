@@ -4,4 +4,9 @@
   width: 50%;
   height: 75%;
   top: 15%;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
 }

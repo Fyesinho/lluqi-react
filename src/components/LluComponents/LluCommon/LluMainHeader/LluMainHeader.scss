@@ -56,16 +56,17 @@ html, body {
       display: none;
     }
     .container-header {
+      padding-top: 20px;
       text-align: center;
-      padding-right: 80px;
-      padding-left: 80px;
+      padding-right: unset;
+      padding-left: unset;
       margin-right: auto;
       margin-left: auto;
     }
     .llu-logo {
-      display: block;
-      float: none;
-      padding: 21px 0 0 0;
+      display: unset;
+      float: unset;
+      padding:  0 70px;
     }
   }
 }

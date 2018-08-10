@@ -107,12 +107,13 @@ html, body {
     .llu-main_header .llu-social, .llu-main_header .llu-anchor_menu {
       display: none; }
     .llu-main_header .container-header {
+      padding-top: 20px;
       text-align: center;
-      padding-right: 80px;
-      padding-left: 80px;
+      padding-right: unset;
+      padding-left: unset;
       margin-right: auto;
       margin-left: auto; }
     .llu-main_header .llu-logo {
-      display: block;
-      float: none;
-      padding: 21px 0 0 0; } }
+      display: unset;
+      float: unset;
+      padding: 0 70px; } }

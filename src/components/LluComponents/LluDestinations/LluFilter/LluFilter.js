@@ -2,9 +2,29 @@ import React, {Component} from 'react';
 import LluIcon from "../../LluCommon/LluIcon/LluIcon";
 
 class LluFilter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {width: 0, height: 0};
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({width: window.innerWidth, height: window.innerHeight});
+    }
+
     render() {
+        const classCol = this.state.width > 600 ? 'col-4' : 'col-12';
         return (
-            <div className="col-4 mt-2 rounded" style={{height: 'auto', boxShadow: '1px -1px 20px 1px #c5c8d1'}}>
+            <div className={`${classCol} mt-2 rounded`} style={{height: 'auto', boxShadow: '1px -1px 20px 1px #c5c8d1'}}>
                 <div className="flex pt-4">
                     <button className="btn btn-primary mr-3 filter"><LluIcon className="fas fa-check"/> Aplicar Filtros
                     </button>
