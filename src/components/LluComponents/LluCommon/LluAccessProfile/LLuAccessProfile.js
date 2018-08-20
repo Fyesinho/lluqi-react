@@ -24,7 +24,11 @@ class LLuAccessProfile extends Component {
                         <small>{type}</small>
                     </figcaption>
                 </figure>
-
+                <div className="llu-access_profile_menu">
+                    <a href="#">Perfil</a>
+                    <a href="#">Mensajes</a>
+                    <a href="#">Salir</a>
+                </div>
             </div>
         )
     }
