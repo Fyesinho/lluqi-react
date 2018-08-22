@@ -30,7 +30,7 @@ const inputStyle = {
     height: 25
 };
 
-const LluField = ({fields, input, meta}) =>
+const LluField = ({fields, input, meta, isPristine}) =>
     <div className='container mt-3' style={label}>
         <div className='row'>
             <div className="col-1"/>
@@ -46,6 +46,9 @@ const LluField = ({fields, input, meta}) =>
             <div className="col-1 text-left" style={asterisco}>
                 *
             </div>
+        </div>
+        <div style={{color: 'red', fontWeight: 400}}>
+            {!isPristine && meta.error}
         </div>
         <span>{fields.subtitle}</span>
     </div>;
