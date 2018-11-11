@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LluIcon from "../../LluCommon/LluIcon/LluIcon";
+import {Link} from 'react-router-dom';
 
 class LluHostels extends Component {
     constructor(props) {
@@ -24,28 +25,29 @@ class LluHostels extends Component {
     render() {
         const classCol = this.state.width > 600 ? 'col-3' : 'col-12';
         const classCol2 = this.state.width > 600 ? 'col-9' : 'col-12';
+        const {hostel} = this.props;
         return (
-            <div className="mb-2">
-                <div className="llu-result_hotel row" style={{boxShadow: '1px -1px 20px 1px #c5c8d1'}}>
+            <Link to={`hostal/${hostel.id}`} className="mb-4" style={{cursor: 'pointer', color: 'inherit'}}>
+                <div className="llu-result_hotel row" style={{boxShadow: '1px -1px 20px 1px #c5c8d1', marginTop: 10}}>
                     <div className={classCol} style={{paddingLeft: 0, paddingRight: 0}}>
-                        <img src="https://q-ec.bstatic.com/images/hotel/max1024x768/468/46871800.jpg" alt=""/>
+                        <img src={hostel.main_picture} alt=""/>
                     </div>
                     <div className={classCol2} style={{paddingLeft: 0, paddingRight: 0}}>
-                        <div className="tag">NUEVO HOSTAL</div>
+                        {/*<div className="tag">NUEVO HOSTAL</div>*/}
                         <div className="row">
-                            <div className="col_1 col-5">
-                                <h5>Columba Hostel</h5>
-                                <p>Valparaíso, Chile</p>
+                            <div className="col_1 col-5 mt-3">
+                                <h5>{hostel.name_hostel}</h5>
+                                <p>{hostel.city.city}</p>
                                 <p className="calificacion">Sin calificación</p>
                             </div>
                             <div className="col_2 col-6">
-                                <p><LluIcon className="fas fa-user"/>(0) Viajeros de Lluqi.com recibidos</p>
+                                <p><LluIcon className="fas fa-user"/>({hostel.travelers_reciebed}) Viajeros de Lluqi.com recibidos</p>
                                 <p><LluIcon className="fas fa-comments"/>(0) comentarios disponibles</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         )
     }
 }

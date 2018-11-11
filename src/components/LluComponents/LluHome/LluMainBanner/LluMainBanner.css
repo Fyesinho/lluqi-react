@@ -36,7 +36,7 @@
 .llu-body_form {
   font-size: 12px !important; }
   .llu-body_form label {
-    padding-left: 120px;
+    padding-left: 100px;
     padding-top: 10px;
     margin-bottom: 0;
     font-weight: 900; }
@@ -62,7 +62,6 @@
   color: #ffb400; }
 
 .llu-main_banner {
-  margin-top: 80px;
   height: 600px;
   background-image: url("../../../../assets/images/background-home.png");
   text-align: center; }

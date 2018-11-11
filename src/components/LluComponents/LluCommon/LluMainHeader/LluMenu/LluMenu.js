@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 //Components
-import LluModalRegisterParentTraveler from "../../../../LluModals/LluModalsRegisterTraveler/LluModalRegister/LluModalRegisterParent";
-import LluModalRegisterParentHostel from "../../../../LluModals/LluModalsRegisterHostal/LluModalRegister/LluModalRegisterParent";
+// import LluModalRegisterParentHostel from "../../../../LluModals/LluModalsRegisterHostal/LluModalRegister/LluModalRegisterParent";
 import LluModalsLogin from "../../../../LluModals/LluModalsLogin/LluModalsLogin";
 import LluIcon from "../../LluIcon/LluIcon";
 import LLuAccessProfile from "../../LluAccessProfile/LLuAccessProfile";
-
+import {openModalRegisterTravelerOne} from "../../../../redux/modules/modal_register_traveler/modal_register_traveler";
+import LluModalRegisterTraveler from "../../../../LluModals/LluModalsRegisterTraveler/LluModalRegister/LluModalRegister";
 
 class LluMenu extends Component {
     render() {
+        const {openModal} = this.props;
         const user = sessionStorage.getItem('user');
         const style = {
             color: '#575756'
         };
-
         return (
             <nav className="llu-anchor_menu">
                 {user ?
@@ -23,21 +24,25 @@ class LluMenu extends Component {
                             <Link style={style} to='/bitacora'>Bitácora</Link>
                         </li>
                         <li>
-                            <Link style={style} to='/mensajes'><LluIcon className="fas fa-envelope"/> Mensajes</Link>
+                            <Link style={style} to='/chat'><LluIcon className="fas fa-comments"/> Chat</Link>
                         </li>
                         <li>
-                            <Link style={style} to={`/profile/${user}`}>
+                            {user.is_premium? null : <Link style={style} to='/prepago'><LluIcon className="fas fa-credit-card"/> Quiero ser PRO</Link>}
+                        </li>
+                        <li>
+                            <div style={style}>
                                 <LLuAccessProfile/>
-                            </Link>
+                            </div>
                         </li>
                     </ul> :
                     <ul>
                         <li>
-                            <LluModalRegisterParentTraveler/>
+                            <a id="register_traveler" key="llu-modal_register_anchor" onClick={openModal}>¡Quiero Viajar!</a>
+                            <LluModalRegisterTraveler/>
                         </li>
-                        <li>
-                            <LluModalRegisterParentHostel/>
-                        </li>
+                        {/*<li>*/}
+                            {/*<LluModalRegisterParentHostel/>*/}
+                        {/*</li>*/}
                         <li>
                             <LluModalsLogin/>
                         </li>
@@ -48,4 +53,10 @@ class LluMenu extends Component {
     }
 }
 
-export default LluMenu;
+
+
+const mapDispatchToProps = dispatch => ({
+   openModal: payload => dispatch(openModalRegisterTravelerOne(payload))
+});
+
+export default connect(null, mapDispatchToProps)(LluMenu);

@@ -10,27 +10,42 @@ import LluPictures from "../../LluComponents/LLuProfileHostel/LluPictures/LluPic
 import LluOffer from "../../LluComponents/LLuProfileHostel/LluOffer/LluOffer";
 import LluWork from "../../LluComponents/LLuProfileHostel/LluWork/LluWork";
 import LluCalendar from "../../LluComponents/LLuProfileHostel/LluCalendar/LluCalendar";
-import LluFeedback from "../../LluComponents/LLuProfileHostel/LluFeedback/LluFeedback";
+// import LluFeedback from "../../LluComponents/LLuProfileHostel/LluFeedback/LluFeedback";
+import {getHostel} from '../../LluComponents/LluCommon/LluApi/LluApi';
 
 class LluProfileHostel extends Component {
+    constructor() {
+        super();
+        this.state={
+            hostel: {}
+        }
+    }
+
+    componentDidMount(){
+        const {id} = this.props.match.params;
+        getHostel(id).then(response => {
+            this.setState({
+            hostel: response.data[0]
+        })});
+    }
+
     render() {
+        const {hostel} = this.state;
         return [
             <LluMainHeader key="llu-main_header"/>,
-            <LluProfileBanner key="llu-profile_banner"/>,
-            <LluHostelInformation key="llu-hostel_information"/>,
+            <LluProfileBanner main_picture={hostel.main_picture} key="llu-profile_banner"/>,
+            <LluHostelInformation hostel={hostel} key="llu-hostel_information"/>,
             <LluSeparation key="llu-separation"/>,
-            <LluAboutUs key="llu-about_us"/>,
+            <LluAboutUs hostel={hostel} key="llu-about_us"/>,
             <LluSeparation key="llu-separation_2"/>,
-            <LluPictures key="llu-pictures"/>,
+            <LluPictures images={hostel.images} key="llu-pictures"/>,
             <LluSeparation key="llu-separation_3"/>,
-            <LluOffer key="llu-offer"/>,
+            <LluOffer offers={hostel.offers} key="llu-offer"/>,
             <LluSeparation key="llu-separation_4"/>,
-            <LluWork key="llu-work"/>,
+            <LluWork activities={hostel.activities} key="llu-work"/>,
             <LluSeparation key="llu-separation_5"/>,
-            <LluCalendar key="llu-calendar"/>,
+            <LluCalendar months={hostel.months} key="llu-calendar"/>,
             <LluSeparation key="llu-separation_6"/>,
-            <LluFeedback key="llu-feedback"/>,
-            <LluSeparation key="llu-separation_7"/>,
             <LluFooter key="llu-footer"/>,
             <LluTermsAndConditions key="llu-terms-and-conditions"/>
         ]

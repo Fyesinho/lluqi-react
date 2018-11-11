@@ -38,11 +38,10 @@ html, body {
 }
 
 .#{$prefix-llu}message-content {
-  height: 77vh;
+  padding-top: 5px;
+  overflow: auto;
 }
 
 .#{$prefix-llu}write {
-  position: fixed;
-  bottom: 20px;
-  width: 40%;
+  text-align: center;
 }

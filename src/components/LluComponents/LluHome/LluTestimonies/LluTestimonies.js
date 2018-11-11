@@ -3,15 +3,15 @@ import Slider from 'react-slick';
 //Assets
 import './LluTestimonies.css';
 //Functions
-import {nextArrow, prevArrow} from "../../LluCommon/LluConstants/LluConstants";
+import {NextArrow, PrevArrow} from "../../LluCommon/LluConstants/LluConstants";
 import LluTestimonie from "../../LluCommon/LluTestimonie/LluTestimonie";
 
 class LluTestimonies extends Component {
     render() {
         const settings = {
             dots: true,
-            nextArrow: nextArrow(this.props),
-            prevArrow: prevArrow(this.props)
+            nextArrow: <NextArrow/>,
+            prevArrow: <PrevArrow/>
         };
         const arrayTest = [
             {
@@ -41,7 +41,7 @@ class LluTestimonies extends Component {
         ];
         return (
             <div className="llu-testimonies">
-                <Slider  {...settings} className="llu-slider">
+                <Slider {...settings} className="llu-slider">
                     {arrayTest && arrayTest.map((value, index) => {
                         return <div key={"llu-testimonie" + index}>
                             <LluTestimonie image={value.image}

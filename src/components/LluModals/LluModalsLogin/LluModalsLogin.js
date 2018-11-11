@@ -7,6 +7,7 @@ import LluIcon from "../../LluComponents/LluCommon/LluIcon/LluIcon";
 
 import './LluModalsLogin.css';
 import LluButton from "../../LluComponents/LluCommon/LluButton/LluButton";
+import {loginUser} from "../../redux/modules/user/api";
 
 class LluModalsLogin extends LluComponent {
     constructor() {
@@ -70,9 +71,7 @@ class LluModalsLogin extends LluComponent {
     }
 
     submitLogin() {
-        sessionStorage.setItem('user', this.state.email);
-        sessionStorage.setItem('type', 'hostel');
-        window.location.reload();
+        loginUser(this.state.email, this.state.password);
     }
 
     render() {
@@ -85,6 +84,7 @@ class LluModalsLogin extends LluComponent {
                 key="llu-modal_select"
                 directionLeft={true}
                 className="llu-container llu-half_modal"
+                onRequestClose={this.closeModal}
                 isOpenClass={this.state.isOpenClass}
                 isOpen={this.state.modalIsOpen}>
                 <div className="llu-container">
@@ -96,7 +96,7 @@ class LluModalsLogin extends LluComponent {
                     <hr/>
                     <div className="container">
                         <div className="llu-body_form_login row">
-                            <p className="label_login" htmlFor="basic-url">Mi email</p>
+                            <p className="label_login">Mi email</p>
                             <div className="input-group container">
                                 <div className="input-group-prepend">
                                     <LluIcon className="fas fa-envelope"/>
@@ -105,7 +105,7 @@ class LluModalsLogin extends LluComponent {
                                        type="text"
                                        className="llu-input_form"/>
                             </div>
-                            <p className="label_login" htmlFor="basic-url">Mi contraseña</p>
+                            <p className="label_login">Mi contraseña</p>
                             <div className="input-group container">
                                 <div className="input-group-prepend">
                                     <LluIcon className="fas fa-key"/>

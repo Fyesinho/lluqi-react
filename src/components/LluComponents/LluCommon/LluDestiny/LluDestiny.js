@@ -32,23 +32,23 @@ class LluDestiny extends Component{
                         </figcaption>
                     </figure>
                 </div>
-                <div className="interactions-destinations">
-                    <hr/>
-                    <div className="row-flex">
-                        <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="far fa-heart"/><br/>wishlist
-                        </div>
-                        <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fas fa-share-alt"/><br/>compartir
-                        </div>
-                        <div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon
-                            className="fas fa-image"/><br/>ver anfitriones
-                        </div>
-                        <div className="col-3" style={{padding: 0}}><LluIcon
-                            className="far fa-map"/><br/>ver en mapa
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="interactions-destinations">*/}
+                    {/*<hr/>*/}
+                    {/*<div className="row-flex">*/}
+                        {/*<div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon*/}
+                            {/*className="far fa-heart"/><br/>wishlist*/}
+                        {/*</div>*/}
+                        {/*<div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon*/}
+                            {/*className="fas fa-share-alt"/><br/>compartir*/}
+                        {/*</div>*/}
+                        {/*<div className="col-3" style={{padding: 0, borderRight: "1px solid #e5e5e5"}}><LluIcon*/}
+                            {/*className="fas fa-image"/><br/>ver anfitriones*/}
+                        {/*</div>*/}
+                        {/*<div className="col-3" style={{padding: 0}}><LluIcon*/}
+                            {/*className="far fa-map"/><br/>ver en mapa*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         )
     }

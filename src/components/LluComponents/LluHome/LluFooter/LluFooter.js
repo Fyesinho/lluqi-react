@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './LluFooter.css';
 import LluAnchor from "../../LluCommon/LluAnchor/LluAnchor";
+import {Link} from 'react-router-dom';
 
 class LluFooter extends Component {
     render() {
+        window.scrollTo(0,0);
         return (
             <footer className="footer llu-footer">
                 <div className="container">
@@ -19,7 +21,7 @@ class LluFooter extends Component {
                         <div className="col-md-3">
                             <h6>SOBRE NOSOTROS</h6>
                             <ul>
-                                <li><LluAnchor>QUIENES SOMOS</LluAnchor></li>
+                                <li><Link style={{color: 'inherit', textDecoration: 'none'}} to={'/quienes-somos'}>QUIENES SOMOS</Link></li>
                                 <li><LluAnchor>COMO FUNCIONA</LluAnchor></li>
                                 <li><LluAnchor>PRENSA</LluAnchor></li>
                                 <li><LluAnchor>BLOG</LluAnchor></li>

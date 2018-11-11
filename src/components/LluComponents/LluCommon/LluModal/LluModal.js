@@ -43,8 +43,9 @@ class LluModal extends Component {
 
         return (
             <Modal
-                onRequestClose={this.props.close}
+                onRequestClose={this.props.onRequestClose}
                 className={className}
+                closeTimeoutMS={200}
                 overlayClassName={classNameOverlay}
                 isOpen={this.props.isOpen}>
                 {this.props.children}

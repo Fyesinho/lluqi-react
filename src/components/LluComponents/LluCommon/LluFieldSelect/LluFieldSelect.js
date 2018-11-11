@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import LluIcon from "../LluIcon/LluIcon";
 
 const label = {
@@ -41,8 +41,9 @@ const LluFieldSelect = ({input, meta, fields, isPristine}) => <div className='co
         </div>
         <div className="col-10" style={noPadding}>
             <select {...input} style={inputStyle}>
+                <option selected="true" disabled="disabled">Género</option>
                 {fields.options && fields.options.map((value, key) => {
-                    return <option key={key}>{value}</option>
+                    return <option key={key+1}>{value}</option>
                 })}
             </select>
         </div>

@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import LluComponentMenuUser from './LluComponentMenuUser/LluComponentMenuUser';
 import './LluMenuUser.css';
 
-class LluMenuUser extends Component{
+class LluMenuUser extends Component {
     render() {
-        return(
+        const {chats} = this.props;
+        return (
             <div className="col-4">
-                <LluComponentMenuUser/>
-                <LluComponentMenuUser/>
-                <LluComponentMenuUser/>
-                <LluComponentMenuUser/>
+                {chats && chats.map(chat => {
+                    return <LluComponentMenuUser {...this.props} chats={chats} key={chat.id} chat={chat}/>;
+                })}
             </div>
-        )
+        );
     }
 }
 

@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import LluService from "../../LluCommon/LluService/LluService";
 //Assets
 import './LluOffer.css';
-import LluServiceMore from "../../LluCommon/LluServiceMore/LluServiceMore";
 
 class LluOffer extends Component{
     render(){
@@ -11,11 +10,40 @@ class LluOffer extends Component{
             <div className="container llu-offer">
                 <h2>Te ofrecemos</h2>
                 <div className="d-flex">
-                    <LluService className="fas fa-bed" title="Alojamiento" description={description}/>
-                    <LluService className="fas fa-globe" title="Almuerzo" description={description}/>
-                    <LluService className="fas fa-wifi" title="Internet" description={description}/>
-                    <LluServiceMore/>
+                    {this.props.offers && this.props.offers.splice(0, 6).map((activity, index) =>
+                        <LluService key={index}
+                                    className={activity.avatar}
+                                    title={activity.offer}
+                                    description={description}/>
+                    )}
                 </div>
+                {this.props.offers && this.props.offers.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.offers && this.props.offers.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.offer}
+                                        description={description}/>
+                        )}
+                    </div> : null}
+                {this.props.offers && this.props.offers.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.offers && this.props.offers.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.offer}
+                                        description={description}/>
+                        )}
+                    </div> : null }
+                {this.props.offers && this.props.offers.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.offers && this.props.offers.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.offer}
+                                        description={description}/>
+                        )}
+                    </div> : null}
             </div>
         )
     }

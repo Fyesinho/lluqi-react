@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 //Assets
 import './LluAccessProfile.css';
 
@@ -6,14 +7,20 @@ class LLuAccessProfile extends Component {
     constructor(){
         super();
         this.capitalizeFirstLetter = this.capitalizeFirstLetter.bind(this);
+        this.handlerOnClick = this.handlerOnClick.bind(this);
     }
 
     capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
+    handlerOnClick(){
+        sessionStorage.clear();
+        window.location.replace('/')
+    }
     
     render() {
-        const user = this.capitalizeFirstLetter(sessionStorage.getItem('user'));
+        const user = this.capitalizeFirstLetter(JSON.parse(sessionStorage.getItem('user')).name);
         const type = sessionStorage.getItem('type');
         return (
             <div className="llu-access_profile">
@@ -25,9 +32,9 @@ class LLuAccessProfile extends Component {
                     </figcaption>
                 </figure>
                 <div className="llu-access_profile_menu">
-                    <a href="#">Perfil</a>
-                    <a href="#">Mensajes</a>
-                    <a href="#">Salir</a>
+                    <Link to={`/my-profile/`}>Perfil</Link>
+                    <a href="/">Mensajes</a>
+                    <a onClick={this.handlerOnClick}>Salir</a>
                 </div>
             </div>
         )

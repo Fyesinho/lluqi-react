@@ -10,18 +10,19 @@ import LluNewsletter from "../../LluComponents/LluHome/LluNewsletter/LluNewslett
 import LluThanks from "../../LluComponents/LluHome/LluThanks/LluThanks";
 import LluFooter from "../../LluComponents/LluHome/LluFooter/LluFooter";
 import LluTermsAndConditions from "../../LluComponents/LluHome/LluTermsAndConditions/LluTermsAndConditions";
+import LluProgress from "../../LluComponents/LluHome/LluProgress/LluProgress";
 
 class LluHome extends Component {
     render() {
         return [
             <LluMainHeader key="llu-main_header"/>,
+            sessionStorage.getItem('user') && <LluProgress key='llu-progress'/>,
             <LluMainBanner key="llu-main_banner"/>,
             <LluHowWorks key="llu-how_works"/>,
             <LluTestimonies key="llu-testimonies"/>,
             <LluDestinations key="llu-destinations"/>,
             <LluNewsletter key="llu-newsletter"/>,
             <LluThanks key="llu-thanks"/>,
-            <LluFooter key="llu-footer"/>,
             <LluTermsAndConditions key="llu-terms-and-conditions"/>
         ]
     }

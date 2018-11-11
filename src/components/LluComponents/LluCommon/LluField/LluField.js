@@ -41,7 +41,7 @@ const LluField = ({fields, input, meta, isPristine}) =>
                 <LluIcon className={fields.icon} style={icon}/>
             </div>
             <div className="col-10" style={noPadding}>
-                <input {...input} style={inputStyle}/>
+                <input {...input} type={fields.type} style={inputStyle}/>
             </div>
             <div className="col-1 text-left" style={asterisco}>
                 *

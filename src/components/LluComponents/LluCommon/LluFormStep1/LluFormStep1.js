@@ -1,11 +1,15 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 //Assets
-import './LluFormStep1.css'
+import './LluFormStep1.css';
 import LluField from "../LluField/LluField";
 import LluFieldSelect from "../LluFieldSelect/LluFieldSelect";
 import {setUserRegister} from "../../../redux/modules/user/user";
 import {connect} from 'react-redux';
+import {closeModalRegisterTravelerOne} from "../../../redux/modules/modal_register_traveler/modal_register_traveler";
+import {openModalRegisterTravelerTwo} from "../../../redux/modules/modal_register_traveler/modal_register_traveler_step2";
+import LluModalRegisterStep2
+    from "../../../LluModals/LluModalsRegisterTraveler/LluModalRegisterStep2/LluModalRegisterStep2";
 
 const campos = [
     {
@@ -25,7 +29,7 @@ const campos = [
     {
         title: 'Soy...',
         icon: 'fa fa-transgender',
-        options: ['Sexo', 'Hombre', 'Mujer', 'Otro'],
+        options: ['Hombre', 'Mujer', 'Otro'],
         subtitle: 'Es solo para fines analíticos'
     },
     {
@@ -41,6 +45,13 @@ const campos = [
         placeholder: '+569-12345678',
         subtitle: '***',
         type: 'phone'
+    },
+    {
+        title: 'Repite la contraseña',
+        icon: 'fa fa-key',
+        placeholder: '********',
+        subtitle: 'Las contraseñas deben coincidir',
+        type: 'password'
     }
 ];
 
@@ -56,20 +67,23 @@ const validate = values => {
     } else if (!checkEmail(values.email)) {
         errors.email = '* Ingresar correo válido';
     }
-    if(!values.username) {
+    if (!values.username) {
         errors.username = '* El nombre de usuario es requerido';
     } else if (values.username.length < 6) {
         errors.username = '* El nombre de usuario debe tener 6 o mas caracteres';
     }
-    if(!values.genero) {
+    if (!values.genero) {
         errors.genero = '* El género es requerido';
     }
-    if(!values.password) {
+    if (!values.password) {
         errors.password = '* La contraseña es requerida';
     } else if (values.password.length < 8) {
         errors.password = '* La contraseña debe tener 8 o mas caracteres';
     }
-    if(!values.telefono) {
+    if (!values.repassword || values.repassword !== values.password) {
+        errors.repassword = '* Las contraseñas deben coincidir';
+    }
+    if (!values.telefono) {
         errors.telefono = '* El telefono es requerido';
     } else if (values.telefono.length < 11) {
         errors.telefono = '* El telefono debe ser de la forma 56912345678';
@@ -77,32 +91,38 @@ const validate = values => {
     return errors;
 };
 
-const algo = () => console.log('algo');
+const handleClick = (event, props) => {
+    const {closeModal} = props;
+    closeModal();
+};
 
 let LluFormStep1 = props => {
-    console.log(props);
     const {handleSubmit, addUser, pristine, invalid} = props;
     return <form onSubmit={handleSubmit(addUser)} style={{padding: '0 35px', maxWidth: 490, margin: 'auto'}}>
         <Field name='email' fields={campos[0]} component={LluField} isPristine={pristine}/>
         <Field name='username' fields={campos[1]} component={LluField} isPristine={pristine}/>
         <Field name='genero' fields={campos[2]} component={LluFieldSelect} isPristine={pristine}/>
         <Field name='password' fields={campos[3]} component={LluField} isPristine={pristine}/>
+        <Field name='repassword' fields={campos[5]} component={LluField} isPristine={pristine}/>
         <Field name='telefono' fields={campos[4]} component={LluField} isPristine={pristine}/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore
-            et dolore magna aliqua. </p>
+        <p>Antes de finalizar tu registro en lluqi.com, debes leer y aceptar la Política de Privacidad que indica cómo conservaremos y utilizaremos tu información personal</p>
         <div className="row">
-            <span className="checkbox-inline col-12"><input type="checkbox" value=""/>Lorem ipsum dolor sit amet,
-            consectetur</span>
+            <span className="checkbox-inline col-12">Lorem ipsum dolor sit amet,onsectetur</span>
         </div>
         <div key="button_next" className="col-12 text-center">
-            <button onClick={algo} disabled={pristine || invalid} className="btn btn-primary shadow" type='submit'>Siguiente >></button>
-            {/*<LluModalRegisterParentStep2/>*/}
+            <button onClick={event => handleClick(event, props)}
+                    disabled={pristine || invalid}
+                    className="btn btn-primary shadow" type='submit'>Aceptar
+            </button>
+            <LluModalRegisterStep2/>
         </div>
-    </form>};
+    </form>;
+};
 
 const mapDispatchToProps = dispatch => ({
-    addUser: payload => dispatch(setUserRegister(payload))
+    addUser: payload => dispatch(setUserRegister(payload)),
+    closeModal: payload => dispatch(closeModalRegisterTravelerOne(payload)),
+    openNextModal: payload => dispatch(openModalRegisterTravelerTwo(payload))
 });
 
 LluFormStep1 = reduxForm({

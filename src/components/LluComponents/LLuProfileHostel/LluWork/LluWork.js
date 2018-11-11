@@ -1,23 +1,51 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import LluService from "../../LluCommon/LluService/LluService";
 //Assets
 import './LluWork.css';
-import LluServiceMore from "../../LluCommon/LluServiceMore/LluServiceMore";
 
-class LluWork extends Component{
-    render(){
+class LluWork extends Component {
+    render() {
         const description = 'Lorem ipsun solor sir amet, consectetur adipiscing elit.';
-        return(
+        return (
             <div className="container llu-offer">
                 <h2>A cambio de tu ayuda en...</h2>
                 <div className="d-flex">
-                    <LluService className="fas fa-bed" title="Alojamiento" description={description}/>
-                    <LluService className="fas fa-globe" title="Almuerzo" description={description}/>
-                    <LluService className="fas fa-wifi" title="Internet" description={description}/>
-                    <LluServiceMore/>
+                    {this.props.activities && this.props.activities.splice(0, 6).map((activity, index) =>
+                        <LluService key={index}
+                                    className={activity.avatar}
+                                    title={activity.activity}
+                                    description={description}/>
+                    )}
                 </div>
+                {this.props.activities && this.props.activities.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.activities && this.props.activities.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.activity}
+                                        description={description}/>
+                        )}
+                    </div> : null}
+                {this.props.activities && this.props.activities.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.activities && this.props.activities.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.activity}
+                                        description={description}/>
+                        )}
+                    </div> : null }
+                {this.props.activities && this.props.activities.length > 0 ?
+                    <div className="d-flex" style={{marginTop: 15}}>
+                        {this.props.activities && this.props.activities.splice(0, 6).map((activity, index) =>
+                            <LluService key={index}
+                                        className={activity.avatar}
+                                        title={activity.activity}
+                                        description={description}/>
+                        )}
+                    </div> : null}
             </div>
-        )
+        );
     }
 }
 

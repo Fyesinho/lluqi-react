@@ -9,7 +9,7 @@ class LluService extends Component{
             <div className="llu-service">
                 <LluIcon className={this.props.className}/>
                 <h6>{this.props.title}</h6>
-                <small>{this.props.description}</small>
+                {/*<small>{this.props.description}</small>*/}
             </div>
         )
     }

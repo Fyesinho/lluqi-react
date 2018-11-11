@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Slider from 'react-slick';
 import LluIcon from "../../LluCommon/LluIcon/LluIcon";
 import LluButton from "../../LluCommon/LluButton/LluButton";
-import {nextArrow, prevArrow} from "../../LluCommon/LluConstants/LluConstants";
+import {NextArrow, PrevArrow} from "../../LluCommon/LluConstants/LluConstants";
 import LluDestiny from "../../LluCommon/LluDestiny/LluDestiny";
 
 //Assets
@@ -36,8 +36,8 @@ class LluDestinations extends Component {
             speed: 500,
             slidesToShow: slides,
             slidesToScroll: 1,
-            nextArrow: nextArrow(this.props),
-            prevArrow: prevArrow(this.props)
+            nextArrow: <NextArrow/>,
+            prevArrow: <PrevArrow/>
         };
         return [
             <section key="llu-destinations" className="llu-destinations">

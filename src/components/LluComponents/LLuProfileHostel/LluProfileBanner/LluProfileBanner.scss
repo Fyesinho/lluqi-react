@@ -3,6 +3,7 @@
 .#{$prefix-llu}profile_banner {
   background: white;
   img{
+    object-fit: cover;
     max-height: 500px;
     width: 100%;
   }
