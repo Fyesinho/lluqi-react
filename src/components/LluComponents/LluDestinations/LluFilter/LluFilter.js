@@ -22,13 +22,15 @@ class LluFilter extends Component {
     }
 
     render() {
-        const classCol = this.state.width > 600 ? 'col-4' : 'col-12';
+        const classCol = this.state.width > 800 ? 'col-4' : 'col-12';
+        const {countries, cities, months, offers, activities} = this.props;
         return (
-            <div className={`${classCol} mt-2 rounded`} style={{height: 'auto', boxShadow: '1px -1px 20px 1px #c5c8d1'}}>
+            <div className={`${classCol} mt-2 rounded`}
+                 style={{height: 'auto', boxShadow: '1px -1px 20px 1px #c5c8d1'}}>
                 <div className="flex pt-4">
-                    <button className="btn btn-primary mr-3 filter"><LluIcon className="fas fa-check"/> Aplicar Filtros
+                    <button onClick={this.props.onClick} className="btn btn-primary mr-3 filter"><LluIcon className="fas fa-check"/> Aplicar Filtros
                     </button>
-                    <button className="btn btn-primary mr-3 filter"><LluIcon className="fas fa-times"/> Limpiar Filtros
+                    <button onClick={this.props.onClickClean} className="btn btn-primary mr-3 filter"><LluIcon className="fas fa-times"/> Limpiar Filtros
                     </button>
                 </div>
                 <hr/>
@@ -38,258 +40,87 @@ class LluFilter extends Component {
                 </div>
                 <hr/>
                 <div id="countries" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#pais" aria-expanded="true"
+                    <a className="anchor-filter" data-toggle="collapse" href="#country" aria-expanded="true"
                        aria-controls="pais">
                         <LluIcon className="fas fa-angle-up"/> País
                     </a>
                     <hr/>
-                    <div className="panel-collapse collapse in text-left" id="pais">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Chile
+                    <div className="panel-collapse collapse in text-left show" id="country">
+                        {countries && countries.map(country => <div key={country.id} className="form-check">
+                            <input onChange={this.props.onChange} className="form-check-input" type="checkbox" name='countries' id={country.id}/>
+                            <label className="form-check-label">
+                                {country.name}
                             </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Argentina
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Perú
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Colombia
-                            </label>
-                        </div>
+                        </div>)}
                         <hr/>
                     </div>
                 </div>
                 <div id="cities" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#ciudad" aria-expanded="true"
+                    <a className="anchor-filter" data-toggle="collapse" href="#city" aria-expanded="true"
                        aria-controls="ciudad">
                         <LluIcon className="fas fa-angle-up"/> Ciudad
                     </a>
                     <hr/>
-                    <div className="collapse text-left" id="ciudad">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Santiago (4)
+                    <div className="panel-collapse collapse in text-left show" id="city">
+                        {cities && cities.map(city => <div key={city.id} className="form-check">
+                            <input onChange={this.props.onChange} className="form-check-input" type="checkbox" name="cities" id={city.id}/>
+                            <label className="form-check-label">
+                                {city.city}
                             </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Punta Arenas (3)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Valparaíso (6)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Cochamó (1)
-                            </label>
-                        </div>
+                        </div>)}
                         <hr/>
                     </div>
                 </div>
                 <div id="month" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#mes" aria-expanded="false"
+                    <a className="anchor-filter" data-toggle="collapse" href="#months" aria-expanded="false"
                        aria-controls="mes">
                         <LluIcon className="fas fa-angle-up"/> Meses disponibles
                     </a>
                     <hr/>
-                    <div className="collapse text-left" id="mes">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Enero
+                    <div className="collapse text-left" id="months">
+                        {months && months.map(month => <div key={month.id} className="form-check">
+                            <input onChange={this.props.onChange} className="form-check-input" type="checkbox" name="months" id={month.id}/>
+                            <label className="form-check-label">
+                                {month.name}
                             </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Febrero
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Marzo
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Abril
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Mayo
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Junio
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Julio
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Agosto
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Septiembre
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Octubre
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Noviembre
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Diciembre
-                            </label>
-                        </div>
+                        </div>)}
                         <hr/>
                     </div>
                 </div>
                 <div id="cities" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#ofrece" aria-expanded="true"
+                    <a className="anchor-filter" data-toggle="collapse" href="#offers" aria-expanded="true"
                        aria-controls="ofrece">
                         <LluIcon className="fas fa-angle-up"/> Se ofrece a cambio
                     </a>
                     <hr/>
-                    <div className="collapse text-left" id="ofrece">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Alojamiento (4)
+                    <div className="collapse text-left" id="offers">
+                        {offers && offers.map(offer => <div key={offer.id} className="form-check">
+                            <input onChange={this.props.onChange} className="form-check-input" type="checkbox" name='offers' id={offer.id}/>
+                            <label className="form-check-label">
+                                {offer.offer}
                             </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Lavandería (3)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Desayuno (6)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Internet (1)
-                            </label>
-                        </div>
+                        </div>)}
                         <hr/>
                     </div>
                 </div>
                 <div id="cities" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#tareasb" aria-expanded="true"
-                       aria-controls="tareasb">
-                        <LluIcon className="fas fa-angle-up"/> Tareas básicas
+                    <a className="anchor-filter" data-toggle="collapse" href="#tasks" aria-expanded="true"
+                       aria-controls="tasks">
+                        <LluIcon className="fas fa-angle-up"/> Tareas
                     </a>
                     <hr/>
-                    <div className="collapse text-left" id="tareasb">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Recepción (4)
+                    <div className="collapse text-left" id="tasks">
+                        {activities && activities.map(activity => <div key={activity.id} className="form-check">
+                            <input onChange={this.props.onChange} className="form-check-input" type="checkbox" name='activities' id={activity.id}/>
+                            <label className="form-check-label">
+                                {activity.activity}
                             </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Limpieza (3)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Mantenimiento (6)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Jardinería (1)
-                            </label>
-                        </div>
+                        </div>)}
+
                         <hr/>
                     </div>
                 </div>
-                <div id="cities" className="text-left">
-                    <a className="anchor-filter" data-toggle="collapse" href="#tarease" aria-expanded="true"
-                       aria-controls="tarease">
-                        <LluIcon className="fas fa-angle-up"/> Tareas básicas
-                    </a>
-                    <hr/>
-                    <div className="collapse text-left" id="tarease">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Fotogrfía (4)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Artista (3)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Desarrollo Web/Blog (6)
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" id="country_1"/>
-                            <label className="form-check-label" v-for="country_1">
-                                Turnos nocturnos (1)
-                            </label>
-                        </div>
-                        <hr/>
-                    </div>
-                </div>
-                <div id="cities" className="text-left">
+                {/* <div id="cities" className="text-left">
                     <a className="anchor-filter" data-toggle="collapse" href="#tiempo" aria-expanded="false"
                        aria-controls="tiempo">
                         <LluIcon className="fas fa-angle-up"/> Tiempo de ayuda
@@ -303,9 +134,9 @@ class LluFilter extends Component {
                         </div>
                         <input type="range" min="1" max="100" value="50" className="slider" id="myRange"/>
                     </div>
-                </div>
+                </div>*/}
             </div>
-        )
+        );
     }
 }
 

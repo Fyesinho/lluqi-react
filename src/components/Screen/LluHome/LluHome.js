@@ -8,7 +8,7 @@ import LluTestimonies from "../../LluComponents/LluHome/LluTestimonies/LluTestim
 import LluDestinations from "../../LluComponents/LluHome/LluDestinations/LluDestinations";
 import LluNewsletter from "../../LluComponents/LluHome/LluNewsletter/LluNewsletter";
 import LluThanks from "../../LluComponents/LluHome/LluThanks/LluThanks";
-import LluFooter from "../../LluComponents/LluHome/LluFooter/LluFooter";
+// import LluFooter from "../../LluComponents/LluHome/LluFooter/LluFooter";
 import LluTermsAndConditions from "../../LluComponents/LluHome/LluTermsAndConditions/LluTermsAndConditions";
 import LluProgress from "../../LluComponents/LluHome/LluProgress/LluProgress";
 

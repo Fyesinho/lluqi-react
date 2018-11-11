@@ -31,7 +31,7 @@ function getChats() {
                 Authorization: `Bearer ${token}`
             }
         }
-        ).then(response => {
+    ).then(response => {
         return response.data;
     });
 }
@@ -51,7 +51,7 @@ function getChat(id) {
     });
 }
 
-function postCommentChat(id,message) {
+function postCommentChat(id, message) {
     const params = new URLSearchParams();
     params.append('message', message);
 
@@ -77,7 +77,116 @@ function postCommentChat(id,message) {
                     return response;
             }
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log(error));
 }
 
-export {getStaysDummy, getHostels, getHostel, getChats, getChat, postCommentChat}
+function getCountries() {
+    const url = `${BASE_URL}/administrator/api/countries`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getCities() {
+    const url = `${BASE_URL}/administrator/api/cities`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getMonths() {
+    const url = `${BASE_URL}/administrator/api/months`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getOffers() {
+    const url = `${BASE_URL}/administrator/api/offers`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getActivities() {
+    const url = `${BASE_URL}/administrator/api/need_activities`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getFilterHostel(country, city, month, offers, activities) {
+    const params = new URLSearchParams();
+    params.append('country', country || '0');
+    params.append('city', city || '0');
+    params.append('month', month || '0');
+    params.append('offers', offers || '0');
+    params.append('activities', activities || '0');
+
+    const url = `${BASE_URL}/administrator/api/hostels`;
+
+    const options = {
+        method: 'GET',
+        params: params,
+        url,
+        headers: {
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+        }
+    };
+    return axios(options)
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response.data;
+                default:
+                    return response;
+            }
+        })
+        .catch(error => console.log(error));
+}
+
+
+export {
+    getStaysDummy,
+    getHostels,
+    getHostel,
+    getChats,
+    getChat,
+    postCommentChat,
+    getCountries,
+    getCities,
+    getMonths,
+    getOffers,
+    getActivities,
+    getFilterHostel
+};

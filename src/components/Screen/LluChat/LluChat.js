@@ -8,7 +8,7 @@ class LluChat extends Component {
         return[
             <LluMainHeader key="llu-main_header"/>,
             <LluMenuMessage key="llu-chat"/>,
-            <LluTermsAndConditions/>,
+            <LluTermsAndConditions key='llu-terms'/>,
         ]
     }
 }
