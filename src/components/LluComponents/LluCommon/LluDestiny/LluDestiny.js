@@ -4,25 +4,26 @@ import LluIcon from "../LluIcon/LluIcon";
 
 class LluDestiny extends Component{
     render(){
+        const {destiny: {city}} = this.props;
+        const image = `https://admin.lluqi.com/media/${city.media[0].id}/${city.media[0].file_name}`;
         return(
             <div className="llu-destinations__body shadow-box">
                 <div>
                     <figure>
                         <img
-                            src="https://i0.wp.com/beta.lluqi.com/wp-content/uploads/2017/10/arequipa.jpg?w=1080&ssl=1"
+                            src={image}
                             alt="viaje1"/>
                         <figcaption>
                             <p className="canvas">
-                                <LluIcon className="fa fa-map-marker"/>Argentina
+                                <LluIcon className="fa fa-map-marker"/> {city.city}
                             </p>
                             <div className="title-destinations">
                                 <h2>
-                                    Buenos Aires
+                                    {city.city}
                                 </h2>
                             </div>
                             <p className="body-destinations">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                {city.description}
                             </p>
                             <LluAnchor>
                                 <p className="body-informations">

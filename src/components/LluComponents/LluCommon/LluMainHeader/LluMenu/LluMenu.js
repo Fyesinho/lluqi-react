@@ -17,12 +17,12 @@ class LluMenu extends Component {
             color: '#575756'
         };
         return (
-            <nav className="llu-anchor_menu">
+            <nav>
                 {user ?
                     <ul>
-                        <li>
+{/*                        <li>
                             <Link style={style} to='/bitacora'>Bitácora</Link>
-                        </li>
+                        </li>*/}
                         <li>
                             <Link style={style} to='/chat'><LluIcon className="fas fa-comments"/> Chat</Link>
                         </li>

@@ -7,6 +7,7 @@ import LluDestiny from "../../LluCommon/LluDestiny/LluDestiny";
 
 //Assets
 import './LluDestinations.css';
+import {getDestinations} from '../../LluCommon/LluApi/LluApi';
 
 class LluDestinations extends Component {
     constructor(props) {
@@ -16,6 +17,11 @@ class LluDestinations extends Component {
     }
 
     componentDidMount() {
+        getDestinations().then(response => {
+            this.setState({
+                destinations: response.data.data
+            })
+        });
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
@@ -50,21 +56,10 @@ class LluDestinations extends Component {
                         destinos!</LluButton>
                 </div>
                 <Slider {...settings}>
-                    <div>
-                        <LluDestiny/>
-                    </div>
-                    <div>
-                        <LluDestiny/>
-                    </div>
-                    <div>
-                        <LluDestiny/>
-                    </div>
-                    <div>
-                        <LluDestiny/>
-                    </div>
-                    <div>
-                        <LluDestiny/>
-                    </div>
+                    {this.state.destinations && this.state.destinations.map(destiny => <div key={destiny.id}>
+                        <LluDestiny destiny={destiny}/>
+                    </div>)}
+
                 </Slider>
             </section>
 

@@ -175,6 +175,88 @@ function getFilterHostel(country, city, month, offers, activities) {
         .catch(error => console.log(error));
 }
 
+function getLanguages() {
+    const url = `${BASE_URL}/administrator/api/languages`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getTestimonials() {
+    const url = `${BASE_URL}/administrator/api/testimonials`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function getDestinations() {
+    const url = `${BASE_URL}/administrator/api/destinations`;
+    return axios.get(url,
+        {
+            headers: {
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            }
+        }
+    ).then(response => {
+        return response.data;
+    });
+}
+
+function postEditProfile(e) {
+    const params = new URLSearchParams();
+    params.append('name', e.name);
+    params.append('facebook', e.facebook);
+    params.append('vimeo', e.vimeo);
+    params.append('instagram', e.instagram);
+    params.append('youtube', e.youtube);
+    params.append('phone', e.phone);
+    params.append('about_me', e.about_me);
+    params.append('language_id', e.language_id);
+    params.append('language2_id', e.language2_id);
+    params.append('language3_id', e.language3_id);
+    params.append('language4_id', e.language4_id);
+    params.append('description', e.description);
+    params.append('experience', e.experience);
+
+    const url = `${BASE_URL}/administrator/api/user`;
+    const token = sessionStorage.getItem('access_token');
+
+    const options = {
+        method: 'POST',
+        "crossDomain": true,
+        data: params,
+        url,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            Authorization: `Bearer ${token}`
+        }
+    };
+    return axios(options)
+        .then(response => {
+            switch (response.status) {
+                case 200:
+                    return response;
+                default:
+                    return response;
+            }
+        })
+        .catch(error => console.log(error));
+}
+
 
 export {
     getStaysDummy,
@@ -188,5 +270,9 @@ export {
     getMonths,
     getOffers,
     getActivities,
-    getFilterHostel
+    getFilterHostel,
+    getLanguages,
+    getTestimonials,
+    getDestinations,
+    postEditProfile
 };

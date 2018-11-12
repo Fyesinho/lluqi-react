@@ -19,7 +19,7 @@ class LluThanks extends Component {
                 <div className="col-md-3">
                     <img
                         id="santiago_img"
-                        src="https://i1.wp.com/beta.lluqi.com/wp-content/uploads/2017/06/logo-santiago.png?w=1080&ssl=1"
+                        src="https://www.lluqi.com/images/Logo_Imagine_Lab nueva version.png"
                         alt="lluqi"/>
                 </div>
             </div>

@@ -5,46 +5,37 @@ import './LluTestimonies.css';
 //Functions
 import {NextArrow, PrevArrow} from "../../LluCommon/LluConstants/LluConstants";
 import LluTestimonie from "../../LluCommon/LluTestimonie/LluTestimonie";
+import {getTestimonials} from '../../LluCommon/LluApi/LluApi';
 
 class LluTestimonies extends Component {
+    constructor() {
+        super();
+        this.state = {
+            testimonials: []
+        }
+    }
+
+    componentDidMount() {
+        getTestimonials().then(response => {
+            this.setState({
+                testimonials: response[0]
+            })
+        })
+    }
+
     render() {
         const settings = {
             dots: true,
             nextArrow: <NextArrow/>,
             prevArrow: <PrevArrow/>
         };
-        const arrayTest = [
-            {
-                image: "http://placekitten.com/g/400/200",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n" +
-                "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n" +
-                "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n" +
-                "voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-                user: "Viajero 1"
-            },
-            {
-                image: "http://placekitten.com/g/400/200",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n" +
-                "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n" +
-                "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n" +
-                "voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-                user: "Viajero 2"
-            },
-            {
-                image: "http://placekitten.com/g/400/200",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n" +
-                "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n" +
-                "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n" +
-                "voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-                user: "Viajero 3"
-            }
-        ];
         return (
             <div className="llu-testimonies">
                 <Slider {...settings} className="llu-slider">
-                    {arrayTest && arrayTest.map((value, index) => {
+                    {this.state.testimonials && this.state.testimonials.map((value, index) => {
+                        const image = `https://admin.lluqi.com/media/${value.media[0].id}/${value.media[0].file_name}`;
                         return <div key={"llu-testimonie" + index}>
-                            <LluTestimonie image={value.image}
+                            <LluTestimonie image={image}
                                            description={value.description} user={value.user}/>
                         </div>
                     })}

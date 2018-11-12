@@ -79,13 +79,10 @@ html, body {
     padding-left: 80px;
     margin-right: auto;
     margin-left: auto; }
-  .llu-main_header nav {
-    margin: auto;
-    width: 50%; }
-    .llu-main_header nav ul li {
-      display: inline-block;
-      float: left;
-      margin-left: 60px; }
+  .llu-main_header nav ul li {
+    display: inline-block;
+    float: left;
+    margin-left: 60px; }
   .llu-main_header ul li :hover {
     color: #ff9950 !important;
     cursor: pointer; }

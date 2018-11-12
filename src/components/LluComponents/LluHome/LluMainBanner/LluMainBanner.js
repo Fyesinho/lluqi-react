@@ -19,8 +19,8 @@ const LluMainBanner = () => {
                 <p>No necesitas tener experiencia previa, lo importante es compartir lo mejor que sabes hacer.</p>
             </div>
             <div className="button-onboarding">
-                {!user ?
-                    <LluModalsSelectRegister/> : null}
+                {/*{!user ?*/}
+                    {/*<LluModalsSelectRegister/> : null}*/}
                 <Link to={'destinos'}><LluButton className="btn btn-border">¡Quiero ver mas destinos!</LluButton></Link>
             </div>
         </div>

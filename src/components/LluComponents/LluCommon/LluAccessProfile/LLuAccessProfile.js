@@ -20,20 +20,24 @@ class LLuAccessProfile extends Component {
     }
     
     render() {
-        const user = this.capitalizeFirstLetter(JSON.parse(sessionStorage.getItem('user')).name);
+        const username = this.capitalizeFirstLetter(JSON.parse(sessionStorage.getItem('user')).name);
+        const user = JSON.parse(sessionStorage.getItem('user'));
         const type = sessionStorage.getItem('type');
+        const avatarHombre = 'https://www.lluqi.com/images/AVATAR%20HOMBRE.png';
+        const avatarMujer = 'https://www.lluqi.com/images/AVATAR%20MUJER.png';
         return (
             <div className="llu-access_profile">
                 <figure>
-                    <img src="https://secure.gravatar.com/avatar/523253cf254ea05c3c81da5b2448724b?s=400&d=mm&r=g" alt="profile"/>
+                    <img src={user.gender_id === "1" ? avatarHombre : avatarMujer}
+                         alt="profile"/>
                     <figcaption>
-                        <b>{user}</b><br/>
+                        <b>{username}</b><br/>
                         <small>{type}</small>
                     </figcaption>
                 </figure>
                 <div className="llu-access_profile_menu">
-                    <Link to={`/my-profile/`}>Perfil</Link>
-                    <a href="/">Mensajes</a>
+                    <Link to={`/mi-perfil/`}>Perfil</Link>
+                    {/*<Link to={`/configuracion/`}>Configuración</Link>*/}
                     <a onClick={this.handlerOnClick}>Salir</a>
                 </div>
             </div>

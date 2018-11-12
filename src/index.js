@@ -20,6 +20,7 @@ import LluQuienesSomos from './components/Screen/LluQuienesSomos/LluQuienesSomos
 import LluComoFunciona from './components/Screen/LluComoFunciona/LluComoFunciona';
 import LluConfirmation from './components/Screen/LLuConfirmation/LluConfirmation';
 import LluPostPago from './components/Screen/LluPostPago/LluPostPago';
+import LluMyProfileEdit from './components/Screen/LluMyProfileEdit/LluMyProfileEdit';
 
 const LluqiRouter = () =>
     <Provider store={store}>
@@ -30,6 +31,7 @@ const LluqiRouter = () =>
                     <Route path='/perfil/:name_profile' component={LluProfileSelect}/>
                     <Route path='/hostal/:id' component={LluProfileHostel}/>
                     <Route path='/mi-perfil/' component={LluMyProfileSelect}/>
+                    <Route path='/mi-perfil-edit/' component={LluMyProfileEdit}/>
                     <Route path='/demo' component={DemoForm}/>
                     <Route path='/bitacora' component={LluBinnacle}/>
                     <Route path='/destinos/' component={LluDestinations}/>

@@ -26,15 +26,12 @@ class LluNewsletter extends Component {
     render() {
         return (
             <div className="llu-newsletter">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore </p>
-                <h1>¿Quieres recibir novedades de <span>Lluqi.com</span> en tu correo?</h1>
-                <p style={{marginBottom: this.state.width < 601 ? 0 : "50px"}} className="container">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>La comunidad de viajeros también puede ser parte del equipo lluqi.com</p>
+                <h1>¿Quieres ser parte del equipo <span>Lluqi?</span></h1>
+                <p style={{marginBottom: this.state.width < 601 ? 0 : "50px"}} className="container">Déjanos tu correo electrónico y te enviaremos más información para que te unas a nosotros!</p>
                 <div style={{display: "unset"}} className="form-inline">
                     <input placeholder="tu correo electrónico" className="form-control form-group" type="text"/>
-                    <LluButton className="btn btn-primary">Suscribirme</LluButton>
+                    <LluButton className="btn btn-primary">Quiero saber mas</LluButton>
                 </div>
             </div>
         )

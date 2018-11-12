@@ -61,41 +61,31 @@
 .color-primary {
   color: #ffb400; }
 
-.llu-how_works {
-  background: white;
-  text-align: center;
-  padding: 50px; }
-  .llu-how_works h1 {
+.title-color {
+  color: #ffb400; }
+
+.llu-biography {
+  background: white; }
+  .llu-biography .video {
+    color: green; }
+  .llu-biography img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3px solid gray; }
+  .llu-biography h3 {
     font-family: "Roboto Slab"; }
-  .llu-how_works p {
+  .llu-biography p {
     font-size: 14px; }
-  .llu-how_works .llu-row {
-    margin-top: 40px;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: 19px;
-    margin-left: 19px; }
-  .llu-how_works .success {
-    margin-top: 10px;
-    background: #00b195;
-    color: white;
-    width: 40%;
-    height: 44px; }
-  .llu-how_works .btn-register {
-    background: #e91e62;
-    color: white;
-    height: 44px;
-    margin-top: 80px;
-    width: 25%; }
-  @media (max-width: 600px) {
-    .llu-how_works h1 {
-      font-size: 36px; }
-    .llu-how_works img {
-      width: 100%; }
-    .llu-how_works .success {
-      width: 100%;
-      margin-bottom: 20px; }
-    .llu-how_works .btn-register {
-      margin-top: 20px;
-      width: 100%; } }
+    .llu-biography p svg {
+      color: green; }
+
+.llu-data {
+  background: white; }
+  .llu-data h3 {
+    font-family: "Roboto Slab"; }
+  .llu-data .icon_profile {
+    color: #b4b4b4;
+    font-size: 50px; }

@@ -78,7 +78,8 @@
     width: 142px;
     border-radius: 71px 71px 71px 71px;
     display: block;
-    margin: auto; }
+    margin: auto;
+    object-fit: cover; }
   .llu-testimonies .slick-dots {
     margin-left: 0 !important;
     bottom: -20%; }

@@ -3,8 +3,9 @@ import React, {Component} from 'react';
 import LluLogo from "./LluLogo/LluLogo";
 import LluMenu from "./LluMenu/LluMenu";
 import LluSocial from "./LluSocial/LluSocial";
+import {Col, Row} from 'react-bootstrap';
 //Assets
-import './LluMainHeader.css'
+import './LluMainHeader.css';
 import LluIcon from "../LluIcon/LluIcon";
 
 class LluMainHeader extends Component {
@@ -34,17 +35,21 @@ class LluMainHeader extends Component {
         };
         return (
             <header className="llu-main_header">
-                <div className="container-header">
+                <div className="row">
                     {this.state.width < 601 && <LluIcon style={styleMenu} className="fas fa-bars"/>}
-                    <LluLogo/>
+                    <Col md={1}>
+                        <LluLogo/>
+                    </Col>
                     {this.state.width < 601 && <LluIcon style={styleMenu} className="fas fa-question-circle"/>}
-                    <div style={{paddingTop: "18px"}}>
-                        <LluMenu/>
-                        <LluSocial/>
-                    </div>
+                    <Col md={11}>
+                        <div style={{paddingTop: "18px"}}>
+                            <LluMenu/>
+                            <LluSocial/>
+                        </div>
+                    </Col>
                 </div>
             </header>
-        )
+        );
     }
 }
 

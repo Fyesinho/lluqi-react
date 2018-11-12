@@ -41,7 +41,7 @@ const LluFieldSelect = ({input, meta, fields, isPristine}) => <div className='co
         </div>
         <div className="col-10" style={noPadding}>
             <select {...input} style={inputStyle}>
-                <option selected="true" disabled="disabled">Género</option>
+                <option defaultValue="true" disabled="disabled">Género</option>
                 {fields.options && fields.options.map((value, key) => {
                     return <option key={key+1}>{value}</option>
                 })}

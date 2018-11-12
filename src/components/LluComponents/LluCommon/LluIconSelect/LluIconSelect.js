@@ -31,7 +31,7 @@ class LluIconSelect extends Component {
             font = '25px'
         }
         return (
-            <div onClick={this.handleClick} className={col + " text-center float-lg-left" + clase}>
+            <div onClick={this.handleClick} className={col + " text-center pb-3" + clase}>
                 <LluIcon style={{fontSize: font}}
                          className={this.props.className + clase}/><br/>
                 <span className="text-center">{this.props.children}</span>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LluButton from "../../../LluCommon/LluButton/LluButton";
-
+import {Link} from 'react-router-dom';
 
 class LluSteps extends Component{
     render(){
@@ -11,7 +11,7 @@ class LluSteps extends Component{
                     <h5 className="title"><b>{this.props.title}</b></h5>
                     <p className="description">{this.props.description}</p>
                 </div>
-                <LluButton className="btn success shadow">{this.props.button}</LluButton>
+                <LluButton className="btn success shadow"><Link to={this.props.url}>{this.props.button}</Link></LluButton>
             </div>
         )
     }
